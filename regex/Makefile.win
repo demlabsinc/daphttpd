@@ -1,0 +1,37 @@
+
+my-dir = $(call parent-dir,$(lastword $(MAKEFILE_LIST)))
+
+prextarget := ../lib
+
+LOCAL_PATH       := $(call my-dir)
+LOCAL_MODULE     := regex$(xtarget)
+
+include ../win32/[cdf_set].mk
+
+LOCAL_C_INCLUDES += src/ \
+
+LOCAL_EXPORT_C_INCLUDES := $(LOCAL_C_INCLUDES)
+
+LOCAL_C_DEFINES := UNDEBUG NDEBUG _WIN32 WIN32 __WIN32 _WINDOWS __WINDOWS__ _CRT_SECURE_NO_WARNINGS HAVE_CONFIG_H REGEX_STATIC
+
+LOCAL_SRC_FILES := \
+	src/regex.c \
+
+
+#	src/apprentice.c \
+#	src/softmagic.c \
+
+#	src/ascmagic.c \
+#	src/encoding.c \
+#	src/compress.c \
+#	src/is_tar.c \
+#	src/readelf.c \
+#	src/print.c \
+#	src/fsmagic.c \
+#	src/funcs.c \
+#	apptype.c \
+#	src/cdf.c \
+#	src/cdf_time.c \
+#	src/readcdf.c
+
+include ../win32/[cdf_makelib].mk

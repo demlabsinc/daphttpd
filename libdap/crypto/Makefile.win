@@ -1,0 +1,39 @@
+
+my-dir = $(call parent-dir,$(lastword $(MAKEFILE_LIST)))
+
+prextarget := ../../lib
+
+LOCAL_PATH       := $(call my-dir)
+LOCAL_MODULE     := libdap_crypto$(xtarget)
+
+C_11_FLAG := TRUE
+
+include ../../win32/[cdf_set].mk
+
+LOCAL_C_INCLUDES += \
+	../core/ \
+	rand/ \
+	defeo_scheme/ \
+	oaes/ \
+	sig_picnic/ \
+  ../../pthread-win32/ \
+
+LOCAL_EXPORT_C_INCLUDES := $(LOCAL_C_INCLUDES)
+
+LOCAL_C_DEFINES := UNDEBUG NDEBUG WIN32 __WIN32 _WINDOWS __WINDOWS__ _CRT_SECURE_NO_WARNINGS _GNU_SOURCE
+LOCAL_C_DEFINES += _USRDLL _CRT_SECURE_NO_DEPRECATE HAVE_CONFIG_H PTW32_BUILD_INLINED PTW32_STATIC_LIB
+
+LOCAL_SRC_FILES := \
+	$(wildcard *.c) \
+	$(wildcard rand/*.c) \
+	$(wildcard oaes/*.c) \
+	$(wildcard sha3/*.c) \
+	$(wildcard msrln/*.c) \
+	$(wildcard defeo_scheme/*.c) \
+	$(wildcard sig_bliss/*.c) \
+	$(wildcard sig_picnic/*.c) \
+	$(wildcard sig_picnic/sha3/*.c) \
+	$(wildcard sig_picnic/sha3/opt64/*.c) \
+	$(wildcard sig_tesla/*.c) \
+
+include ../../win32/[cdf_makelib].mk

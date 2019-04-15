@@ -1,0 +1,34 @@
+
+my-dir = $(call parent-dir,$(lastword $(MAKEFILE_LIST)))
+
+prextarget := ../lib
+
+LOCAL_PATH       := $(call my-dir)
+LOCAL_MODULE     := zlib$(xtarget)
+
+include ../win32/[cdf_set].mk
+
+LOCAL_C_INCLUDES += include/ \
+
+LOCAL_EXPORT_C_INCLUDES := $(LOCAL_C_INCLUDES)
+
+LOCAL_C_DEFINES := UNDEBUG NDEBUG WIN32 __WIN32 _WINDOWS __WINDOWS__ _CRT_SECURE_NO_WARNINGS
+
+LOCAL_SRC_FILES := \
+	adler32.c \
+	compress.c \
+	crc32.c \
+	deflate.c \
+	gzclose.c \
+	gzlib.c \
+	gzread.c \
+	gzwrite.c \
+	inflate.c \
+	infback.c \
+	inftrees.c \
+	inffast.c \
+	trees.c \
+	uncompr.c \
+	zutil.c
+
+include ../win32/[cdf_makelib].mk

@@ -1,0 +1,22 @@
+
+my-dir = $(call parent-dir,$(lastword $(MAKEFILE_LIST)))
+
+prextarget := ../lib
+
+LOCAL_PATH       := $(call my-dir)
+LOCAL_MODULE     := wepoll$(xtarget)
+
+include ../win32/[cdf_set].mk
+
+LOCAL_C_INCLUDES += include/ \
+										src/regular
+
+LOCAL_EXPORT_C_INCLUDES := $(LOCAL_C_INCLUDES)
+
+LOCAL_C_DEFINES := UNDEBUG NDEBUG WIN32 _WINDOWS __WINDOWS__ _CRT_SECURE_NO_WARNINGS _CRT_SECURE_NO_DEPRECATE
+#LOCAL_C_DEFINES += HAVE_CONFIG_H
+
+LOCAL_SRC_FILES := \
+	$(wildcard src/*.c) \
+
+include ../win32/[cdf_makelib].mk

@@ -1,0 +1,27 @@
+export DEFSPLUS= -D_REGEX_RE_COMP
+export INCLUDESPLUS=
+export STINCLUDES= 
+export CFLAGSPLUS=
+export LDFLAGSPLUS=
+export LIBSPLUS= 
+export DLLFLAG=-DBUILD_REGEX_DLL
+sedfiles=Makefile libtool config.h
+#BUILDDIR=$(shell pwd.sh)
+BUILDDIR=$(shell pwd.sh | sed -e "s/\([0-9]\+\)-[a-z]*$$/\1/I")
+SRCDIR=../$(shell basename $(BUILDDIR)-src)
+
+.PHONY: all 
+all: CONF MFSED
+CONF:
+#	if [ -e Makefile.in.sed ]; then \
+#		find.exe $(SRCDIR) -iname Makefile.in -exec sed -i -f Makefile.in.sed '{}' ';' ; \
+#	fi
+	$(SRCDIR)/configure --prefix=c:/progra~1/Regex --srcdir="$(SRCDIR)" \
+		--enable-shared --disable-static
+	
+-include $(DVLDIR)/makefile.chg
+
+#	make all
+#	make check
+#	make install prefix=c:/temp/sed
+                                 
