@@ -1,0 +1,27 @@
+
+my-dir = $(call parent-dir,$(lastword $(MAKEFILE_LIST)))
+
+prextarget := ../lib
+
+LOCAL_PATH       := $(call my-dir)
+LOCAL_MODULE     := libfcgi2$(xtarget)
+
+include ../win32/[cdf_set].mk
+
+LOCAL_C_INCLUDES += \
+	include/
+
+LOCAL_EXPORT_C_INCLUDES := $(LOCAL_C_INCLUDES)
+
+LOCAL_C_DEFINES := UNDEBUG NDEBUG WIN32 _WINDOWS __WINDOWS__ _CRT_SECURE_NO_WARNINGS
+
+LOCAL_SRC_FILES := \
+	libfcgi\fcgi_stdio.c \
+	libfcgi\fcgiapp.c \
+	libfcgi\fcgio.cpp \
+	libfcgi\os_win32.c \
+	libfcgi\strerror.c
+
+#	libfcgi\os_unix.c \
+
+include ../win32/[cdf_makelib].mk

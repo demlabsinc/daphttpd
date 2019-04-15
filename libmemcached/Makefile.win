@@ -1,0 +1,36 @@
+
+my-dir = $(call parent-dir,$(lastword $(MAKEFILE_LIST)))
+
+prextarget := ../lib
+
+LOCAL_PATH       := $(call my-dir)
+LOCAL_MODULE     := libmemcached$(xtarget)
+
+include ../win32/[cdf_set].mk
+
+LOCAL_C_INCLUDES += ../libmemcached/ \
+	win32/
+
+LOCAL_EXPORT_C_INCLUDES := $(LOCAL_C_INCLUDES)
+
+LOCAL_C_DEFINES := UNDEBUG NDEBUG WIN32 _WINDOWS __WINDOWS__ _CRT_SECURE_NO_WARNINGS _GNU_SOURCE
+
+LOCAL_SRC_FILES := \
+  libhashkit/algorithm.c \
+  libhashkit/behavior.c \
+  libhashkit/crc32.c \
+  libhashkit/fnv.c \
+  libhashkit/digest.c \
+  libhashkit/function.c \
+  libhashkit/hashkit.c \
+  libhashkit/jenkins.c \
+  libhashkit/ketama.c \
+	libhashkit/md5.c \
+	libhashkit/murmur.c \
+	libhashkit/one_at_a_time.c \
+	libhashkit/strerror.c \
+	$(wildcard libmemcached/*.c) \
+	$(wildcard libmemcached/protocol/*.c) \
+	$(wildcard libmemcached/util/*.c) \
+
+include ../win32/[cdf_makelib].mk

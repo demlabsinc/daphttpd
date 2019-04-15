@@ -1,0 +1,53 @@
+
+my-dir = $(call parent-dir,$(lastword $(MAKEFILE_LIST)))
+
+prextarget := ../lib
+
+LOCAL_PATH       := $(call my-dir)
+LOCAL_MODULE     := helloworld$(xtarget)
+
+include ../win32/[cdf_set_con].mk
+
+LOCAL_C_INCLUDES += \
+  ../libfcgi2/include/ \
+
+LOCAL_EXPORT_C_INCLUDES := $(LOCAL_C_INCLUDES)
+
+LOCAL_C_DEFINES := UNDEBUG NDEBUG WIN32 _WINDOWS __WINDOWS__ _CRT_SECURE_NO_WARNINGS
+LOCAL_C_DEFINES += _USRDLL _CRT_SECURE_NO_DEPRECATE HAVE_CONFIG_H
+
+LOCAL_LSLIBS := \
+  libfcgi2
+
+LOCAL_LSLIBS := $(addsuffix $(xtarget).a, $(LOCAL_LSLIBS))
+
+ifneq ($(filter [x86CLANG] [x86_64CLANG] [x86GCC] [x86_64GCC],$(xtarget)),)
+    LOCAL_LSLIBS := $(addprefix ../lib/$(xtarget)/, $(LOCAL_LSLIBS))
+endif
+
+LOCAL_LDLIBS := \
+    KERNEL32 \
+    USER32 \
+    SHELL32 \
+    WINMM \
+    GDI32 \
+    ADVAPI32 \
+    Ole32 \
+    Version \
+    Imm32 \
+    OleAut32 \
+    ws2_32 \
+    ntdll \
+    psapi \
+    Shlwapi
+
+ifneq ($(filter [x86CLANG] [x86_64CLANG] [x86GCC] [x86_64GCC],$(xtarget)),)
+    LOCAL_LDLIBS := $(addprefix -l, $(LOCAL_LDLIBS))
+else
+    LOCAL_LDLIBS := $(addsuffix .lib, $(LOCAL_LDLIBS))
+endif
+
+LOCAL_SRC_FILES := \
+    helloworld.c \
+
+include ../win32/[cdf_makebin].mk

@@ -1,0 +1,2225 @@
+[04/14/19-21:46:41] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-21:46:41] [ * ] [  server]	Initialized socket server module
+[04/14/19-21:46:41] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-21:46:41] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-21:46:41] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-21:46:41] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-21:46:41] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-21:46:41] [ * ] [  server]	 Socket 100 set nonblock...
+[04/14/19-21:46:41] [ * ] [  server]	 Socket created...
+[04/14/19-21:46:41] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-21:46:41] [INF] [  server]	pthread_mutex_init
+[04/14/19-21:46:41] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-21:46:41] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-21:46:41] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-21:46:41] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-21:46:41] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-21:46:41] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-21:46:41] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-21:46:41] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-21:46:41] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-21:46:41] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-21:46:41] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-21:46:41] [DBG] [  server]	[THREAD 0] Sleep before polling...
+[04/14/19-21:46:41] [DBG] [  server]	[THREAD 1] Sleep before polling...
+[04/14/19-21:46:41] [DBG] [  server]	[THREAD 2] Sleep before polling...
+[04/14/19-21:46:41] [DBG] [  server]	[THREAD 3] Sleep before polling...
+[04/14/19-21:46:44] [INF] [  server]	accept_cb: Client accept socket 180
+[04/14/19-21:46:44] [ * ] [  server]	 DEBUG 0000002
+[04/14/19-21:46:44] [DBG] [  server]	fd 180 Client send to thread 0
+[04/14/19-21:46:44] [ * ] [  server]	 DEBUG 0000003
+[04/14/19-21:46:44] [ * ] [  server]	 dap_client_remote_create
+[04/14/19-21:46:45] [DBG] [dap_client_remote]	Create remote client[]
+[04/14/19-21:46:46] [ * ] [http_client]	dap_http_client_new
+[04/14/19-21:46:46] [DBG] [dap_client_remote]	Create remote client: ip: 0.0.0.0 port 0
+[04/14/19-21:46:46] [ * ] [  server]	 dap_client_remote_create ok
+[04/14/19-21:46:46] [DBG] [  server]	[THREAD 0] EPOLL 164...
+[04/14/19-21:46:46] [DBG] [  server]	[THREAD 1] EPOLL 168...
+[04/14/19-21:46:46] [DBG] [  server]	[THREAD 2] EPOLL 172...
+[04/14/19-21:46:46] [DBG] [  server]	[THREAD 3] EPOLL 176...
+[04/14/19-21:46:47] [ * ] [  server]	 DEBUG 0000004
+[04/14/19-21:46:47] [INF] [  server]	accept_cb: Client accept socket 188
+[04/14/19-21:46:47] [ * ] [  server]	 DEBUG 0000002
+[04/14/19-21:46:47] [DBG] [  server]	fd 188 Client send to thread 1
+[04/14/19-21:46:47] [ * ] [  server]	 DEBUG 0000003
+[04/14/19-21:46:47] [ * ] [  server]	 dap_client_remote_create
+[04/14/19-21:46:47] [DBG] [  server]	[THREAD 0] n = 1
+[04/14/19-21:46:47] [DBG] [  server]	[THREAD 0] proc event 0
+[04/14/19-21:46:47] [ * ] [  server]	[THREAD 0] read_write_cb fd 180 revents 5
+[04/14/19-21:46:47] [DBG] [  server]	[THREAD 0] socket read 180 
+[04/14/19-21:46:47] [DBG] [  server]	[THREAD 0] read 558 socket client said: GET /fcgi/opa HTTP/1.1
+Host: localhost:8000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+X-Compress: null
+Accept-Encoding: gzip, deflate, br
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,fr;q=0.6,de;q=0.5,cs;q=0.4,zh-CN;q=0.3,zh;q=0.2,af;q=0.1,cy;q=0.1
+
+
+[04/14/19-21:46:47] [DBG] [  server]	[THREAD 0] run read callback 404E20
+[04/14/19-21:46:47] [DBG] [http_client]	dap_http_client_read...
+[04/14/19-21:46:47] [WRN] [http_client]	HTTP client in state read 1 taked bytes in input 558
+[04/14/19-21:46:47] [ * ] [http_client]	dap_http_request_line_parse
+[04/14/19-21:46:47] [WRN] [http_client]	Input: action 'GET' pos=3 pos_kw_begin=0
+[04/14/19-21:46:47] [WRN] [http_client]	Input: url '/fcgi/opa' pos=13 pos_kw_begin=4
+[04/14/19-21:46:47] [WRN] [http_client]	Input: GET request for /fcgi/opa document (query string '')
+[04/14/19-21:46:47] [INF] [http_client]	Input: HTTP headers are over
+[04/14/19-21:46:47] [DBG] [  server]	[THREAD 0] socket write 180 
+[04/14/19-21:46:47] [DBG] [  server]	[THREAD 0] run write callback 4057B0
+[04/14/19-21:46:47] [DBG] [http_client]	dap_http_client_write...
+[04/14/19-21:46:47] [DBG] [dap_http_fcgi]	dap_http_fcgi_headers_write
+[04/14/19-21:46:47] [ERR] [dap_http_fcgi]	can't connect to "/tmp/fcgi.socket"
+[04/14/19-21:46:47] [DBG] [http_client]	Output: HTTP response with 500 status code
+[04/14/19-21:46:47] [ERR] [dap_common]	Can't print formatted time in string
+[04/14/19-21:46:47] [DBG] [http_client]	Output: Headers generated
+[04/14/19-21:46:47] [DBG] [  server]	[THREAD 0] send dap_cur->buf_out_size = 36 , HTTP/1.1 500 Internal Server Error
+
+[04/14/19-21:46:47] [INF] [  server]	[THREAD 0] signal_close: Close Socket 180
+[04/14/19-21:46:47] [DBG] [  server]	[THREAD 0] Removed epoll's event fd 180
+[04/14/19-21:46:47] [DBG] [dap_client_remote]	Client structure remove
+[04/14/19-21:46:48] [ * ] [http_client]	dap_http_client_delete
+[04/14/19-21:46:48] [ * ] [dap_http_fcgi]	dap_http_fcgi_delete()
+[04/14/19-21:46:48] [ * ] [  server]	[THREAD 0] RW DONE
+[04/14/19-21:46:48] [DBG] [  server]	[THREAD 0] Sleep before polling...
+[04/14/19-21:46:48] [DBG] [dap_client_remote]	Create remote client[]
+[04/14/19-21:46:48] [ * ] [http_client]	dap_http_client_new
+[04/14/19-21:46:48] [DBG] [dap_client_remote]	Create remote client: ip: 0.0.0.0 port 0
+[04/14/19-21:46:48] [ * ] [  server]	 dap_client_remote_create ok
+[04/14/19-21:46:49] [ * ] [  server]	 DEBUG 0000004
+[04/14/19-21:46:49] [DBG] [  server]	[THREAD 1] n = 1
+[04/14/19-21:46:49] [DBG] [  server]	[THREAD 1] proc event 0
+[04/14/19-21:46:49] [ * ] [  server]	[THREAD 1] read_write_cb fd 188 revents 4
+[04/14/19-21:46:49] [DBG] [  server]	[THREAD 1] socket write 188 
+[04/14/19-21:46:49] [DBG] [  server]	[THREAD 1] run write callback 4057B0
+[04/14/19-21:46:49] [DBG] [http_client]	dap_http_client_write...
+[04/14/19-21:46:49] [DBG] [  server]	dap_cur->buf_out_size = 0, set ev_read watcher 
+[04/14/19-21:46:49] [ * ] [  server]	[THREAD 1] RW DONE
+[04/14/19-21:46:49] [DBG] [  server]	[THREAD 1] Sleep before polling...
+[04/14/19-21:46:49] [INF] [  server]	accept_cb: Client accept socket 224
+[04/14/19-21:46:49] [ * ] [  server]	 DEBUG 0000002
+[04/14/19-21:46:49] [DBG] [  server]	fd 224 Client send to thread 2
+[04/14/19-21:46:49] [ * ] [  server]	 DEBUG 0000003
+[04/14/19-21:46:49] [ * ] [  server]	 dap_client_remote_create
+[04/14/19-21:46:50] [DBG] [dap_client_remote]	Create remote client[]
+[04/14/19-21:46:51] [ * ] [http_client]	dap_http_client_new
+[04/14/19-21:46:51] [DBG] [dap_client_remote]	Create remote client: ip: 0.0.0.0 port 0
+[04/14/19-21:46:51] [ * ] [  server]	 dap_client_remote_create ok
+[04/14/19-21:46:52] [ * ] [  server]	 DEBUG 0000004
+[04/14/19-21:46:52] [DBG] [  server]	[THREAD 2] n = 1
+[04/14/19-21:46:52] [DBG] [  server]	[THREAD 2] proc event 0
+[04/14/19-21:46:52] [ * ] [  server]	[THREAD 2] read_write_cb fd 224 revents 4
+[04/14/19-21:46:52] [DBG] [  server]	[THREAD 2] socket write 224 
+[04/14/19-21:46:52] [DBG] [  server]	[THREAD 2] run write callback 4057B0
+[04/14/19-21:46:52] [DBG] [http_client]	dap_http_client_write...
+[04/14/19-21:46:52] [DBG] [  server]	dap_cur->buf_out_size = 0, set ev_read watcher 
+[04/14/19-21:46:52] [ * ] [  server]	[THREAD 2] RW DONE
+[04/14/19-21:46:52] [DBG] [  server]	[THREAD 2] Sleep before polling...
+[04/14/19-21:46:53] [DBG] [  server]	[THREAD 0] EPOLL 164...
+[04/14/19-21:46:54] [DBG] [  server]	[THREAD 1] EPOLL 168...
+[04/14/19-21:46:57] [DBG] [  server]	[THREAD 2] EPOLL 172...
+[04/14/19-21:48:47] [DBG] [  server]	[THREAD 2] n = 1
+[04/14/19-21:48:47] [DBG] [  server]	[THREAD 2] proc event 0
+[04/14/19-21:48:47] [ * ] [  server]	[THREAD 2] read_write_cb fd 224 revents 1
+[04/14/19-21:48:47] [DBG] [  server]	[THREAD 2] socket read 224 
+[04/14/19-21:48:47] [DBG] [  server]	[THREAD 2] 0 bytes read
+[04/14/19-21:48:47] [INF] [  server]	[THREAD 2] signal_close: Close Socket 224
+[04/14/19-21:48:47] [DBG] [  server]	[THREAD 1] n = 1
+[04/14/19-21:48:47] [DBG] [  server]	[THREAD 1] proc event 0
+[04/14/19-21:48:47] [ * ] [  server]	[THREAD 1] read_write_cb fd 188 revents 1
+[04/14/19-21:48:47] [DBG] [  server]	[THREAD 1] socket read 188 
+[04/14/19-21:48:47] [DBG] [  server]	[THREAD 2] Removed epoll's event fd 224
+[04/14/19-21:48:47] [DBG] [dap_client_remote]	Client structure remove
+[04/14/19-21:48:47] [DBG] [  server]	[THREAD 1] 0 bytes read
+[04/14/19-21:48:47] [INF] [  server]	[THREAD 1] signal_close: Close Socket 188
+[04/14/19-21:48:47] [DBG] [  server]	[THREAD 1] Removed epoll's event fd 188
+[04/14/19-21:48:47] [DBG] [dap_client_remote]	Client structure remove
+[04/14/19-21:48:47] [INF] [  server]	accept_cb: Client accept socket 248
+[04/14/19-21:48:47] [ * ] [  server]	 DEBUG 0000002
+[04/14/19-21:48:47] [DBG] [  server]	fd 248 Client send to thread 3
+[04/14/19-21:48:47] [ * ] [  server]	 DEBUG 0000003
+[04/14/19-21:48:47] [ * ] [  server]	 dap_client_remote_create
+[04/14/19-21:48:47] [ * ] [http_client]	dap_http_client_delete
+[04/14/19-21:48:47] [ * ] [  server]	[THREAD 2] RW DONE
+[04/14/19-21:48:47] [DBG] [  server]	[THREAD 2] Sleep before polling...
+[04/14/19-21:48:47] [ * ] [http_client]	dap_http_client_delete
+[04/14/19-21:48:47] [ * ] [  server]	[THREAD 1] RW DONE
+[04/14/19-21:48:47] [DBG] [  server]	[THREAD 1] Sleep before polling...
+[04/14/19-21:48:48] [DBG] [dap_client_remote]	Create remote client[]
+[04/14/19-21:48:49] [ * ] [http_client]	dap_http_client_new
+[04/14/19-21:48:49] [DBG] [dap_client_remote]	Create remote client: ip: 0.0.0.0 port 0
+[04/14/19-21:48:49] [ * ] [  server]	 dap_client_remote_create ok
+[04/14/19-21:48:50] [ * ] [  server]	 DEBUG 0000004
+[04/14/19-21:48:50] [DBG] [  server]	[THREAD 3] n = 1
+[04/14/19-21:48:50] [DBG] [  server]	[THREAD 3] proc event 0
+[04/14/19-21:48:50] [INF] [  server]	accept_cb: Client accept socket 256
+[04/14/19-21:48:50] [ * ] [  server]	[THREAD 3] read_write_cb fd 248 revents 5
+[04/14/19-21:48:50] [DBG] [  server]	[THREAD 3] socket read 248 
+[04/14/19-21:48:50] [ * ] [  server]	 DEBUG 0000002
+[04/14/19-21:48:50] [DBG] [  server]	fd 256 Client send to thread 0
+[04/14/19-21:48:50] [ * ] [  server]	 DEBUG 0000003
+[04/14/19-21:48:50] [ * ] [  server]	 dap_client_remote_create
+[04/14/19-21:48:50] [DBG] [  server]	[THREAD 3] read 558 socket client said: GET /fcgi/opa HTTP/1.1
+Host: localhost:8000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+X-Compress: null
+Accept-Encoding: gzip, deflate, br
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,fr;q=0.6,de;q=0.5,cs;q=0.4,zh-CN;q=0.3,zh;q=0.2,af;q=0.1,cy;q=0.1
+
+
+[04/14/19-21:48:50] [DBG] [  server]	[THREAD 3] run read callback 404E20
+[04/14/19-21:48:50] [DBG] [http_client]	dap_http_client_read...
+[04/14/19-21:48:50] [WRN] [http_client]	HTTP client in state read 1 taked bytes in input 558
+[04/14/19-21:48:50] [ * ] [http_client]	dap_http_request_line_parse
+[04/14/19-21:48:50] [WRN] [http_client]	Input: action 'GET' pos=3 pos_kw_begin=0
+[04/14/19-21:48:50] [WRN] [http_client]	Input: url '/fcgi/opa' pos=13 pos_kw_begin=4
+[04/14/19-21:48:50] [WRN] [http_client]	Input: GET request for /fcgi/opa document (query string '')
+[04/14/19-21:48:50] [INF] [http_client]	Input: HTTP headers are over
+[04/14/19-21:48:50] [DBG] [  server]	[THREAD 3] socket write 248 
+[04/14/19-21:48:50] [DBG] [  server]	[THREAD 3] run write callback 4057B0
+[04/14/19-21:48:50] [DBG] [http_client]	dap_http_client_write...
+[04/14/19-21:48:50] [DBG] [dap_http_fcgi]	dap_http_fcgi_headers_write
+[04/14/19-21:48:50] [ERR] [dap_http_fcgi]	can't connect to "/tmp/fcgi.socket"
+[04/14/19-21:48:50] [DBG] [http_client]	Output: HTTP response with 500 status code
+[04/14/19-21:48:50] [ERR] [dap_common]	Can't print formatted time in string
+[04/14/19-21:48:50] [DBG] [http_client]	Output: Headers generated
+[04/14/19-21:48:50] [DBG] [  server]	[THREAD 3] send dap_cur->buf_out_size = 36 , HTTP/1.1 500 Internal Server Error
+
+[04/14/19-21:48:50] [INF] [  server]	[THREAD 3] signal_close: Close Socket 248
+[04/14/19-21:48:50] [DBG] [  server]	[THREAD 3] Removed epoll's event fd 248
+[04/14/19-21:48:50] [DBG] [dap_client_remote]	Client structure remove
+[04/14/19-21:48:50] [ * ] [http_client]	dap_http_client_delete
+[04/14/19-21:48:50] [ * ] [dap_http_fcgi]	dap_http_fcgi_delete()
+[04/14/19-21:48:50] [ * ] [  server]	[THREAD 3] RW DONE
+[04/14/19-21:48:50] [DBG] [  server]	[THREAD 3] Sleep before polling...
+[04/14/19-21:48:51] [DBG] [dap_client_remote]	Create remote client[]
+[04/14/19-21:48:51] [ * ] [http_client]	dap_http_client_new
+[04/14/19-21:48:51] [DBG] [dap_client_remote]	Create remote client: ip: 0.0.0.0 port 0
+[04/14/19-21:48:51] [ * ] [  server]	 dap_client_remote_create ok
+[04/14/19-21:48:52] [ * ] [  server]	 DEBUG 0000004
+[04/14/19-21:48:52] [INF] [  server]	accept_cb: Client accept socket 268
+[04/14/19-21:48:52] [ * ] [  server]	 DEBUG 0000002
+[04/14/19-21:48:52] [DBG] [  server]	fd 268 Client send to thread 1
+[04/14/19-21:48:52] [ * ] [  server]	 DEBUG 0000003
+[04/14/19-21:48:52] [ * ] [  server]	 dap_client_remote_create
+[04/14/19-21:48:52] [DBG] [  server]	[THREAD 0] n = 1
+[04/14/19-21:48:52] [DBG] [  server]	[THREAD 0] proc event 0
+[04/14/19-21:48:52] [ * ] [  server]	[THREAD 0] read_write_cb fd 256 revents 4
+[04/14/19-21:48:52] [DBG] [  server]	[THREAD 0] socket write 256 
+[04/14/19-21:48:52] [DBG] [  server]	[THREAD 0] run write callback 4057B0
+[04/14/19-21:48:52] [DBG] [http_client]	dap_http_client_write...
+[04/14/19-21:48:52] [DBG] [  server]	dap_cur->buf_out_size = 0, set ev_read watcher 
+[04/14/19-21:48:52] [ * ] [  server]	[THREAD 0] RW DONE
+[04/14/19-21:48:52] [DBG] [  server]	[THREAD 0] Sleep before polling...
+[04/14/19-21:48:52] [DBG] [  server]	[THREAD 2] EPOLL 172...
+[04/14/19-21:48:52] [DBG] [  server]	[THREAD 1] EPOLL 168...
+[04/14/19-21:48:53] [DBG] [dap_client_remote]	Create remote client[]
+[04/14/19-21:48:54] [ * ] [http_client]	dap_http_client_new
+[04/14/19-21:48:54] [DBG] [dap_client_remote]	Create remote client: ip: 0.0.0.0 port 0
+[04/14/19-21:48:54] [ * ] [  server]	 dap_client_remote_create ok
+[04/14/19-21:48:55] [ * ] [  server]	 DEBUG 0000004
+[04/14/19-21:48:55] [DBG] [  server]	[THREAD 1] n = 1
+[04/14/19-21:48:55] [DBG] [  server]	[THREAD 1] proc event 0
+[04/14/19-21:48:55] [ * ] [  server]	[THREAD 1] read_write_cb fd 268 revents 4
+[04/14/19-21:48:55] [DBG] [  server]	[THREAD 1] socket write 268 
+[04/14/19-21:48:55] [DBG] [  server]	[THREAD 1] run write callback 4057B0
+[04/14/19-21:48:55] [DBG] [http_client]	dap_http_client_write...
+[04/14/19-21:48:55] [DBG] [  server]	dap_cur->buf_out_size = 0, set ev_read watcher 
+[04/14/19-21:48:55] [ * ] [  server]	[THREAD 1] RW DONE
+[04/14/19-21:48:55] [DBG] [  server]	[THREAD 1] Sleep before polling...
+[04/14/19-21:48:55] [DBG] [  server]	[THREAD 3] EPOLL 176...
+[04/14/19-21:48:57] [DBG] [  server]	[THREAD 0] EPOLL 164...
+[04/14/19-21:49:00] [DBG] [  server]	[THREAD 1] EPOLL 168...
+[04/14/19-21:49:14] [DBG] [  server]	[THREAD 0] n = 1
+[04/14/19-21:49:14] [DBG] [  server]	[THREAD 0] proc event 0
+[04/14/19-21:49:14] [ * ] [  server]	[THREAD 0] read_write_cb fd 256 revents 1
+[04/14/19-21:49:14] [DBG] [  server]	[THREAD 0] socket read 256 
+[04/14/19-21:49:14] [DBG] [  server]	[THREAD 0] 0 bytes read
+[04/14/19-21:49:14] [INF] [  server]	[THREAD 0] signal_close: Close Socket 256
+[04/14/19-21:49:14] [DBG] [  server]	[THREAD 1] n = 1
+[04/14/19-21:49:14] [DBG] [  server]	[THREAD 1] proc event 0
+[04/14/19-21:49:14] [ * ] [  server]	[THREAD 1] read_write_cb fd 268 revents 1
+[04/14/19-21:49:14] [DBG] [  server]	[THREAD 1] socket read 268 
+[04/14/19-21:49:14] [DBG] [  server]	[THREAD 0] Removed epoll's event fd 256
+[04/14/19-21:49:14] [DBG] [dap_client_remote]	Client structure remove
+[04/14/19-21:49:14] [DBG] [  server]	[THREAD 1] 0 bytes read
+[04/14/19-21:49:14] [INF] [  server]	[THREAD 1] signal_close: Close Socket 268
+[04/14/19-21:49:14] [DBG] [  server]	[THREAD 1] Removed epoll's event fd 268
+[04/14/19-21:49:14] [DBG] [dap_client_remote]	Client structure remove
+[04/14/19-21:49:14] [INF] [  server]	accept_cb: Client accept socket 272
+[04/14/19-21:49:14] [ * ] [  server]	 DEBUG 0000002
+[04/14/19-21:49:14] [DBG] [  server]	fd 272 Client send to thread 2
+[04/14/19-21:49:14] [ * ] [  server]	 DEBUG 0000003
+[04/14/19-21:49:14] [ * ] [  server]	 dap_client_remote_create
+[04/14/19-21:49:15] [ * ] [http_client]	dap_http_client_delete
+[04/14/19-21:49:15] [ * ] [http_client]	dap_http_client_delete
+[04/14/19-21:49:15] [ * ] [  server]	[THREAD 1] RW DONE
+[04/14/19-21:49:15] [DBG] [  server]	[THREAD 1] Sleep before polling...
+[04/14/19-21:49:29] [DBG] [dap_client_remote]	Create remote client[]
+[04/14/19-21:55:45] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-21:55:45] [ * ] [  server]	Initialized socket server module
+[04/14/19-21:55:45] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-21:55:45] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-21:55:45] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-21:55:45] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-21:55:45] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-21:55:45] [ * ] [  server]	 Socket 100 set nonblock...
+[04/14/19-21:55:45] [ * ] [  server]	 Socket created...
+[04/14/19-21:55:45] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-21:55:45] [INF] [  server]	pthread_mutex_init
+[04/14/19-21:55:45] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-21:55:45] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-21:55:45] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-21:55:45] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-21:55:45] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-21:55:45] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-21:55:45] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-21:55:45] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-21:55:45] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-21:55:45] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-21:55:45] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-21:55:49] [INF] [  server]	accept_cb: Client accept socket 180
+[04/14/19-21:55:49] [DBG] [dap_client_remote]	Create remote client[]
+[04/14/19-21:55:49] [ * ] [http_client]	dap_http_client_new
+[04/14/19-21:55:49] [DBG] [dap_client_remote]	Create remote client: ip: 0.0.0.0 port 0
+[04/14/19-21:55:49] [ * ] [  server]	 DEBUG 0000004
+[04/14/19-21:55:49] [DBG] [  server]	[THREAD 0] proc event 0
+[04/14/19-21:55:49] [INF] [  server]	accept_cb: Client accept socket 188
+[04/14/19-21:55:49] [ * ] [  server]	[THREAD 0] read_write_cb fd 180 revents 5
+[04/14/19-21:55:49] [DBG] [  server]	[THREAD 0] socket read 180 
+[04/14/19-21:55:49] [DBG] [dap_client_remote]	Create remote client[]
+[04/14/19-21:55:49] [DBG] [  server]	[THREAD 0] read 558 socket client said: GET /fcgi/opa HTTP/1.1
+Host: localhost:8000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+X-Compress: null
+Accept-Encoding: gzip, deflate, br
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,fr;q=0.6,de;q=0.5,cs;q=0.4,zh-CN;q=0.3,zh;q=0.2,af;q=0.1,cy;q=0.1
+
+
+[04/14/19-21:55:49] [DBG] [  server]	[THREAD 0] run read callback 404E20
+[04/14/19-21:55:49] [DBG] [http_client]	dap_http_client_read...
+[04/14/19-21:55:49] [WRN] [http_client]	HTTP client in state read 1 taked bytes in input 558
+[04/14/19-21:55:49] [ * ] [http_client]	dap_http_request_line_parse
+[04/14/19-21:55:49] [WRN] [http_client]	Input: action 'GET' pos=3 pos_kw_begin=0
+[04/14/19-21:55:49] [WRN] [http_client]	Input: url '/fcgi/opa' pos=13 pos_kw_begin=4
+[04/14/19-21:55:49] [WRN] [http_client]	Input: GET request for /fcgi/opa document (query string '')
+[04/14/19-21:55:49] [INF] [http_client]	Input: HTTP headers are over
+[04/14/19-21:55:49] [DBG] [  server]	[THREAD 0] socket write 180 
+[04/14/19-21:55:49] [DBG] [  server]	[THREAD 0] run write callback 4057B0
+[04/14/19-21:55:49] [DBG] [http_client]	dap_http_client_write...
+[04/14/19-21:55:49] [DBG] [dap_http_fcgi]	dap_http_fcgi_headers_write
+[04/14/19-21:55:49] [ERR] [dap_http_fcgi]	can't connect to "/tmp/fcgi.socket"
+[04/14/19-21:55:49] [DBG] [http_client]	Output: HTTP response with 500 status code
+[04/14/19-21:55:49] [ERR] [dap_common]	Can't print formatted time in string
+[04/14/19-21:55:49] [DBG] [http_client]	Output: Headers generated
+[04/14/19-21:55:49] [DBG] [  server]	[THREAD 0] send dap_cur->buf_out_size = 36 , HTTP/1.1 500 Internal Server Error
+
+[04/14/19-21:55:49] [INF] [  server]	[THREAD 0] signal_close: Close Socket 180
+[04/14/19-21:55:49] [DBG] [  server]	[THREAD 0] Removed epoll's event fd 180
+[04/14/19-21:55:49] [DBG] [dap_client_remote]	Client structure remove
+[04/14/19-21:55:50] [ * ] [http_client]	dap_http_client_new
+[04/14/19-21:55:50] [DBG] [dap_client_remote]	Create remote client: ip: 0.0.0.0 port 0
+[04/14/19-21:55:50] [ * ] [  server]	 DEBUG 0000004
+[04/14/19-21:55:50] [DBG] [  server]	[THREAD 1] proc event 0
+[04/14/19-21:55:50] [ * ] [  server]	[THREAD 1] read_write_cb fd 188 revents 4
+[04/14/19-21:55:50] [DBG] [  server]	[THREAD 1] socket write 188 
+[04/14/19-21:55:50] [DBG] [  server]	[THREAD 1] run write callback 4057B0
+[04/14/19-21:55:50] [DBG] [http_client]	dap_http_client_write...
+[04/14/19-21:55:50] [DBG] [  server]	dap_cur->buf_out_size = 0, set ev_read watcher 
+[04/14/19-21:55:50] [ * ] [  server]	[THREAD 1] RW DONE
+[04/14/19-21:55:50] [INF] [  server]	accept_cb: Client accept socket 224
+[04/14/19-21:55:50] [DBG] [dap_client_remote]	Create remote client[]
+[04/14/19-21:55:50] [ * ] [http_client]	dap_http_client_delete
+[04/14/19-21:55:50] [ * ] [dap_http_fcgi]	dap_http_fcgi_delete()
+[04/14/19-21:55:50] [ * ] [  server]	[THREAD 0] RW DONE
+[04/14/19-21:55:50] [ * ] [http_client]	dap_http_client_new
+[04/14/19-21:55:50] [DBG] [dap_client_remote]	Create remote client: ip: 0.0.0.0 port 0
+[04/14/19-21:55:50] [DBG] [  server]	[THREAD 2] proc event 0
+[04/14/19-21:55:50] [ * ] [  server]	[THREAD 2] read_write_cb fd 224 revents 4
+[04/14/19-21:55:50] [DBG] [  server]	[THREAD 2] socket write 224 
+[04/14/19-21:55:50] [DBG] [  server]	[THREAD 2] run write callback 4057B0
+[04/14/19-21:55:50] [DBG] [http_client]	dap_http_client_write...
+[04/14/19-21:55:50] [DBG] [  server]	dap_cur->buf_out_size = 0, set ev_read watcher 
+[04/14/19-21:55:50] [ * ] [  server]	[THREAD 2] RW DONE
+[04/14/19-21:55:50] [ * ] [  server]	 DEBUG 0000004
+[04/14/19-21:57:46] [DBG] [  server]	[THREAD 1] proc event 0
+[04/14/19-21:57:46] [ * ] [  server]	[THREAD 1] read_write_cb fd 188 revents 1
+[04/14/19-21:57:46] [DBG] [  server]	[THREAD 1] socket read 188 
+[04/14/19-21:57:46] [DBG] [  server]	[THREAD 2] proc event 0
+[04/14/19-21:57:46] [ * ] [  server]	[THREAD 2] read_write_cb fd 224 revents 1
+[04/14/19-21:57:46] [DBG] [  server]	[THREAD 2] socket read 224 
+[04/14/19-21:57:46] [DBG] [  server]	[THREAD 1] 0 bytes read
+[04/14/19-21:57:46] [INF] [  server]	[THREAD 1] signal_close: Close Socket 188
+[04/14/19-21:57:46] [DBG] [  server]	[THREAD 2] 0 bytes read
+[04/14/19-21:57:46] [INF] [  server]	[THREAD 2] signal_close: Close Socket 224
+[04/14/19-21:57:46] [DBG] [  server]	[THREAD 2] Removed epoll's event fd 224
+[04/14/19-21:57:46] [DBG] [dap_client_remote]	Client structure remove
+[04/14/19-21:57:46] [DBG] [  server]	[THREAD 1] Removed epoll's event fd 188
+[04/14/19-21:57:46] [DBG] [dap_client_remote]	Client structure remove
+[04/14/19-21:57:47] [ * ] [http_client]	dap_http_client_delete
+[04/14/19-21:57:47] [ * ] [  server]	[THREAD 2] RW DONE
+[04/14/19-21:57:47] [ * ] [http_client]	dap_http_client_delete
+[04/14/19-21:57:47] [ * ] [  server]	[THREAD 1] RW DONE
+[04/14/19-21:59:12] [INF] [  server]	accept_cb: Client accept socket 252
+[04/14/19-21:59:12] [DBG] [dap_client_remote]	Create remote client[]
+[04/14/19-21:59:12] [ * ] [http_client]	dap_http_client_new
+[04/14/19-21:59:12] [DBG] [dap_client_remote]	Create remote client: ip: 0.0.0.0 port 0
+[04/14/19-21:59:12] [ * ] [  server]	 DEBUG 0000004
+[04/14/19-21:59:12] [INF] [  server]	accept_cb: Client accept socket 260
+[04/14/19-21:59:12] [DBG] [dap_client_remote]	Create remote client[]
+[04/14/19-21:59:12] [DBG] [  server]	[THREAD 3] proc event 0
+[04/14/19-21:59:12] [ * ] [  server]	[THREAD 3] read_write_cb fd 252 revents 5
+[04/14/19-21:59:12] [DBG] [  server]	[THREAD 3] socket read 252 
+[04/14/19-21:59:12] [DBG] [  server]	[THREAD 3] read 558 socket client said: GET /fcgi/opa HTTP/1.1
+Host: localhost:8000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+X-Compress: null
+Accept-Encoding: gzip, deflate, br
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,fr;q=0.6,de;q=0.5,cs;q=0.4,zh-CN;q=0.3,zh;q=0.2,af;q=0.1,cy;q=0.1
+
+
+[04/14/19-21:59:12] [DBG] [  server]	[THREAD 3] run read callback 404E20
+[04/14/19-21:59:12] [DBG] [http_client]	dap_http_client_read...
+[04/14/19-21:59:12] [WRN] [http_client]	HTTP client in state read 1 taked bytes in input 558
+[04/14/19-21:59:12] [ * ] [http_client]	dap_http_request_line_parse
+[04/14/19-21:59:12] [WRN] [http_client]	Input: action 'GET' pos=3 pos_kw_begin=0
+[04/14/19-21:59:12] [WRN] [http_client]	Input: url '/fcgi/opa' pos=13 pos_kw_begin=4
+[04/14/19-21:59:12] [WRN] [http_client]	Input: GET request for /fcgi/opa document (query string '')
+[04/14/19-21:59:12] [INF] [http_client]	Input: HTTP headers are over
+[04/14/19-21:59:12] [DBG] [  server]	[THREAD 3] socket write 252 
+[04/14/19-21:59:12] [DBG] [  server]	[THREAD 3] run write callback 4057B0
+[04/14/19-21:59:12] [DBG] [http_client]	dap_http_client_write...
+[04/14/19-21:59:12] [DBG] [dap_http_fcgi]	dap_http_fcgi_headers_write
+[04/14/19-21:59:12] [ERR] [dap_http_fcgi]	can't connect to "/tmp/fcgi.socket"
+[04/14/19-21:59:12] [DBG] [http_client]	Output: HTTP response with 500 status code
+[04/14/19-21:59:12] [ERR] [dap_common]	Can't print formatted time in string
+[04/14/19-21:59:12] [DBG] [http_client]	Output: Headers generated
+[04/14/19-21:59:12] [DBG] [  server]	[THREAD 3] send dap_cur->buf_out_size = 36 , HTTP/1.1 500 Internal Server Error
+
+[04/14/19-21:59:12] [INF] [  server]	[THREAD 3] signal_close: Close Socket 252
+[04/14/19-21:59:12] [DBG] [  server]	[THREAD 3] Removed epoll's event fd 252
+[04/14/19-21:59:12] [DBG] [dap_client_remote]	Client structure remove
+[04/14/19-21:59:13] [ * ] [http_client]	dap_http_client_new
+[04/14/19-21:59:13] [DBG] [dap_client_remote]	Create remote client: ip: 0.0.0.0 port 0
+[04/14/19-21:59:13] [ * ] [  server]	 DEBUG 0000004
+[04/14/19-21:59:13] [INF] [  server]	accept_cb: Client accept socket 272
+[04/14/19-21:59:13] [DBG] [  server]	[THREAD 0] proc event 0
+[04/14/19-21:59:13] [ * ] [  server]	[THREAD 0] read_write_cb fd 260 revents 4
+[04/14/19-21:59:13] [DBG] [  server]	[THREAD 0] socket write 260 
+[04/14/19-21:59:13] [DBG] [  server]	[THREAD 0] run write callback 4057B0
+[04/14/19-21:59:13] [DBG] [http_client]	dap_http_client_write...
+[04/14/19-21:59:13] [DBG] [  server]	dap_cur->buf_out_size = 0, set ev_read watcher 
+[04/14/19-21:59:13] [ * ] [  server]	[THREAD 0] RW DONE
+[04/14/19-21:59:13] [DBG] [dap_client_remote]	Create remote client[]
+[04/14/19-21:59:13] [ * ] [http_client]	dap_http_client_delete
+[04/14/19-21:59:13] [ * ] [dap_http_fcgi]	dap_http_fcgi_delete()
+[04/14/19-21:59:13] [ * ] [  server]	[THREAD 3] RW DONE
+[04/14/19-21:59:13] [ * ] [http_client]	dap_http_client_new
+[04/14/19-21:59:13] [DBG] [dap_client_remote]	Create remote client: ip: 0.0.0.0 port 0
+[04/14/19-21:59:13] [ * ] [  server]	 DEBUG 0000004
+[04/14/19-21:59:13] [DBG] [  server]	[THREAD 1] proc event 0
+[04/14/19-21:59:13] [ * ] [  server]	[THREAD 1] read_write_cb fd 272 revents 4
+[04/14/19-21:59:13] [DBG] [  server]	[THREAD 1] socket write 272 
+[04/14/19-21:59:13] [DBG] [  server]	[THREAD 1] run write callback 4057B0
+[04/14/19-21:59:13] [DBG] [http_client]	dap_http_client_write...
+[04/14/19-21:59:13] [DBG] [  server]	dap_cur->buf_out_size = 0, set ev_read watcher 
+[04/14/19-21:59:13] [ * ] [  server]	[THREAD 1] RW DONE
+[04/14/19-22:00:00] [DBG] [  server]	[THREAD 0] proc event 0
+[04/14/19-22:00:00] [ * ] [  server]	[THREAD 0] read_write_cb fd 260 revents 1
+[04/14/19-22:00:00] [DBG] [  server]	[THREAD 0] socket read 260 
+[04/14/19-22:00:00] [DBG] [  server]	[THREAD 1] proc event 0
+[04/14/19-22:00:00] [ * ] [  server]	[THREAD 1] read_write_cb fd 272 revents 1
+[04/14/19-22:00:00] [DBG] [  server]	[THREAD 1] socket read 272 
+[04/14/19-22:00:00] [DBG] [  server]	[THREAD 0] 0 bytes read
+[04/14/19-22:00:00] [INF] [  server]	[THREAD 0] signal_close: Close Socket 260
+[04/14/19-22:00:00] [DBG] [  server]	[THREAD 1] 0 bytes read
+[04/14/19-22:00:00] [INF] [  server]	[THREAD 1] signal_close: Close Socket 272
+[04/14/19-22:00:00] [DBG] [  server]	[THREAD 0] Removed epoll's event fd 260
+[04/14/19-22:00:00] [DBG] [dap_client_remote]	Client structure remove
+[04/14/19-22:00:00] [DBG] [  server]	[THREAD 1] Removed epoll's event fd 272
+[04/14/19-22:00:00] [DBG] [dap_client_remote]	Client structure remove
+[04/14/19-22:00:01] [INF] [  server]	accept_cb: Client accept socket 276
+[04/14/19-22:00:01] [DBG] [dap_client_remote]	Create remote client[]
+[04/14/19-22:00:01] [ * ] [http_client]	dap_http_client_delete
+[04/14/19-22:00:01] [ * ] [http_client]	dap_http_client_delete
+[04/14/19-22:02:45] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-22:02:45] [ * ] [  server]	Initialized socket server module
+[04/14/19-22:02:45] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-22:02:45] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-22:02:45] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-22:02:45] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-22:02:45] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-22:02:45] [ * ] [  server]	 Socket 100 set nonblock...
+[04/14/19-22:02:45] [ * ] [  server]	 Socket created...
+[04/14/19-22:02:45] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-22:02:45] [INF] [  server]	pthread_mutex_init
+[04/14/19-22:02:45] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-22:02:45] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-22:02:45] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-22:02:45] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-22:02:45] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-22:02:45] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-22:02:45] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-22:02:45] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-22:02:45] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-22:02:45] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-22:02:45] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-22:02:48] [INF] [  server]	accept_cb: Client accept socket 180
+[04/14/19-22:02:48] [DBG] [dap_client_remote]	Create remote client[]
+[04/14/19-22:02:49] [ * ] [http_client]	dap_http_client_new
+[04/14/19-22:02:49] [DBG] [dap_client_remote]	Create remote client: ip: 0.0.0.0 port 0
+[04/14/19-22:02:49] [ * ] [  server]	 DEBUG 0000004
+[04/14/19-22:02:49] [DBG] [  server]	[THREAD 0] proc event 0
+[04/14/19-22:02:49] [INF] [  server]	accept_cb: Client accept socket 188
+[04/14/19-22:02:49] [DBG] [dap_client_remote]	Create remote client[]
+[04/14/19-22:02:49] [ * ] [  server]	[THREAD 0] read_write_cb fd 180 revents 5
+[04/14/19-22:02:49] [DBG] [  server]	[THREAD 0] socket read 180 
+[04/14/19-22:02:49] [DBG] [  server]	[THREAD 0] read 558 socket client said: GET /fcgi/opa HTTP/1.1
+Host: localhost:8000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+X-Compress: null
+Accept-Encoding: gzip, deflate, br
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,fr;q=0.6,de;q=0.5,cs;q=0.4,zh-CN;q=0.3,zh;q=0.2,af;q=0.1,cy;q=0.1
+
+
+[04/14/19-22:02:49] [DBG] [  server]	[THREAD 0] run read callback 404D90
+[04/14/19-22:02:49] [DBG] [http_client]	dap_http_client_read...
+[04/14/19-22:02:49] [WRN] [http_client]	HTTP client in state read 1 taked bytes in input 558
+[04/14/19-22:02:49] [ * ] [http_client]	dap_http_request_line_parse
+[04/14/19-22:02:49] [WRN] [http_client]	Input: action 'GET' pos=3 pos_kw_begin=0
+[04/14/19-22:02:49] [WRN] [http_client]	Input: url '/fcgi/opa' pos=13 pos_kw_begin=4
+[04/14/19-22:02:49] [WRN] [http_client]	Input: GET request for /fcgi/opa document (query string '')
+[04/14/19-22:02:49] [INF] [http_client]	Input: HTTP headers are over
+[04/14/19-22:02:49] [DBG] [  server]	[THREAD 0] socket write 180 
+[04/14/19-22:02:49] [DBG] [  server]	[THREAD 0] run write callback 405720
+[04/14/19-22:02:49] [DBG] [http_client]	dap_http_client_write...
+[04/14/19-22:02:49] [DBG] [dap_http_fcgi]	dap_http_fcgi_headers_write
+[04/14/19-22:02:49] [ERR] [dap_http_fcgi]	can't connect to "/tmp/fcgi.socket"
+[04/14/19-22:02:49] [DBG] [http_client]	Output: HTTP response with 500 status code
+[04/14/19-22:02:49] [ERR] [dap_common]	Can't print formatted time in string
+[04/14/19-22:02:49] [DBG] [http_client]	Output: Headers generated
+[04/14/19-22:02:49] [DBG] [  server]	[THREAD 0] send dap_cur->buf_out_size = 36 , HTTP/1.1 500 Internal Server Error
+
+[04/14/19-22:02:49] [INF] [  server]	[THREAD 0] signal_close: Close Socket 180
+[04/14/19-22:02:49] [DBG] [  server]	[THREAD 0] Removed epoll's event fd 180
+[04/14/19-22:02:49] [DBG] [dap_client_remote]	Client structure remove
+[04/14/19-22:02:49] [ * ] [http_client]	dap_http_client_new
+[04/14/19-22:02:49] [DBG] [dap_client_remote]	Create remote client: ip: 0.0.0.0 port 0
+[04/14/19-22:02:49] [ * ] [  server]	 DEBUG 0000004
+[04/14/19-22:02:49] [DBG] [  server]	[THREAD 1] proc event 0
+[04/14/19-22:02:49] [ * ] [  server]	[THREAD 1] read_write_cb fd 188 revents 4
+[04/14/19-22:02:49] [DBG] [  server]	[THREAD 1] socket write 188 
+[04/14/19-22:02:49] [DBG] [  server]	[THREAD 1] run write callback 405720
+[04/14/19-22:02:49] [DBG] [http_client]	dap_http_client_write...
+[04/14/19-22:02:49] [DBG] [  server]	dap_cur->buf_out_size = 0, set ev_read watcher 
+[04/14/19-22:02:49] [ * ] [  server]	[THREAD 1] RW DONE
+[04/14/19-22:02:49] [INF] [  server]	accept_cb: Client accept socket 224
+[04/14/19-22:02:49] [DBG] [dap_client_remote]	Create remote client[]
+[04/14/19-22:02:49] [ * ] [http_client]	dap_http_client_delete
+[04/14/19-22:02:49] [ * ] [  server]	[THREAD 0] RW DONE
+[04/14/19-22:02:50] [ * ] [http_client]	dap_http_client_new
+[04/14/19-22:02:50] [DBG] [dap_client_remote]	Create remote client: ip: 0.0.0.0 port 0
+[04/14/19-22:02:50] [ * ] [  server]	 DEBUG 0000004
+[04/14/19-22:02:50] [DBG] [  server]	[THREAD 2] proc event 0
+[04/14/19-22:02:50] [ * ] [  server]	[THREAD 2] read_write_cb fd 224 revents 4
+[04/14/19-22:02:50] [DBG] [  server]	[THREAD 2] socket write 224 
+[04/14/19-22:02:50] [DBG] [  server]	[THREAD 2] run write callback 405720
+[04/14/19-22:02:50] [DBG] [http_client]	dap_http_client_write...
+[04/14/19-22:02:50] [DBG] [  server]	dap_cur->buf_out_size = 0, set ev_read watcher 
+[04/14/19-22:02:50] [ * ] [  server]	[THREAD 2] RW DONE
+[04/14/19-22:03:03] [DBG] [  server]	[THREAD 1] proc event 0
+[04/14/19-22:03:03] [ * ] [  server]	[THREAD 1] read_write_cb fd 188 revents 1
+[04/14/19-22:03:03] [DBG] [  server]	[THREAD 1] socket read 188 
+[04/14/19-22:03:03] [DBG] [  server]	[THREAD 1] 0 bytes read
+[04/14/19-22:03:03] [INF] [  server]	[THREAD 1] signal_close: Close Socket 188
+[04/14/19-22:03:03] [DBG] [  server]	[THREAD 2] proc event 0
+[04/14/19-22:03:03] [ * ] [  server]	[THREAD 2] read_write_cb fd 224 revents 1
+[04/14/19-22:03:03] [DBG] [  server]	[THREAD 2] socket read 224 
+[04/14/19-22:03:03] [DBG] [  server]	[THREAD 1] Removed epoll's event fd 188
+[04/14/19-22:03:03] [DBG] [dap_client_remote]	Client structure remove
+[04/14/19-22:03:03] [DBG] [  server]	[THREAD 2] 0 bytes read
+[04/14/19-22:03:03] [INF] [  server]	[THREAD 2] signal_close: Close Socket 224
+[04/14/19-22:03:03] [DBG] [  server]	[THREAD 2] Removed epoll's event fd 224
+[04/14/19-22:03:03] [DBG] [dap_client_remote]	Client structure remove
+[04/14/19-22:03:03] [INF] [  server]	accept_cb: Client accept socket 248
+[04/14/19-22:03:03] [DBG] [dap_client_remote]	Create remote client[]
+[04/14/19-22:03:03] [ * ] [http_client]	dap_http_client_delete
+[04/14/19-22:03:03] [ * ] [  server]	[THREAD 1] RW DONE
+[04/14/19-22:03:03] [ * ] [http_client]	dap_http_client_delete
+[04/14/19-22:03:03] [ * ] [  server]	[THREAD 2] RW DONE
+[04/14/19-22:03:04] [ * ] [http_client]	dap_http_client_new
+[04/14/19-22:03:04] [DBG] [dap_client_remote]	Create remote client: ip: 0.0.0.0 port 0
+[04/14/19-22:03:04] [ * ] [  server]	 DEBUG 0000004
+[04/14/19-22:03:04] [DBG] [  server]	[THREAD 3] proc event 0
+[04/14/19-22:03:04] [ * ] [  server]	[THREAD 3] read_write_cb fd 248 revents 5
+[04/14/19-22:03:04] [DBG] [  server]	[THREAD 3] socket read 248 
+[04/14/19-22:03:04] [INF] [  server]	accept_cb: Client accept socket 256
+[04/14/19-22:03:04] [DBG] [  server]	[THREAD 3] read 558 socket client said: GET /fcgi/opa HTTP/1.1
+Host: localhost:8000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+X-Compress: null
+Accept-Encoding: gzip, deflate, br
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,fr;q=0.6,de;q=0.5,cs;q=0.4,zh-CN;q=0.3,zh;q=0.2,af;q=0.1,cy;q=0.1
+
+
+[04/14/19-22:03:04] [DBG] [  server]	[THREAD 3] run read callback 404D90
+[04/14/19-22:03:04] [DBG] [http_client]	dap_http_client_read...
+[04/14/19-22:03:04] [WRN] [http_client]	HTTP client in state read 1 taked bytes in input 558
+[04/14/19-22:03:04] [DBG] [dap_client_remote]	Create remote client[]
+[04/14/19-22:03:04] [ * ] [http_client]	dap_http_request_line_parse
+[04/14/19-22:03:04] [WRN] [http_client]	Input: action 'GET' pos=3 pos_kw_begin=0
+[04/14/19-22:03:04] [WRN] [http_client]	Input: url '/fcgi/opa' pos=13 pos_kw_begin=4
+[04/14/19-22:03:04] [WRN] [http_client]	Input: GET request for /fcgi/opa document (query string '')
+[04/14/19-22:03:04] [INF] [http_client]	Input: HTTP headers are over
+[04/14/19-22:03:04] [DBG] [  server]	[THREAD 3] socket write 248 
+[04/14/19-22:03:04] [DBG] [  server]	[THREAD 3] run write callback 405720
+[04/14/19-22:03:04] [DBG] [http_client]	dap_http_client_write...
+[04/14/19-22:03:04] [DBG] [dap_http_fcgi]	dap_http_fcgi_headers_write
+[04/14/19-22:03:04] [ERR] [dap_http_fcgi]	can't connect to "/tmp/fcgi.socket"
+[04/14/19-22:03:04] [DBG] [http_client]	Output: HTTP response with 500 status code
+[04/14/19-22:03:04] [ERR] [dap_common]	Can't print formatted time in string
+[04/14/19-22:03:04] [DBG] [http_client]	Output: Headers generated
+[04/14/19-22:03:04] [DBG] [  server]	[THREAD 3] send dap_cur->buf_out_size = 36 , HTTP/1.1 500 Internal Server Error
+
+[04/14/19-22:03:04] [INF] [  server]	[THREAD 3] signal_close: Close Socket 248
+[04/14/19-22:03:04] [DBG] [  server]	[THREAD 3] Removed epoll's event fd 248
+[04/14/19-22:03:04] [DBG] [dap_client_remote]	Client structure remove
+[04/14/19-22:03:04] [ * ] [http_client]	dap_http_client_new
+[04/14/19-22:03:04] [DBG] [dap_client_remote]	Create remote client: ip: 0.0.0.0 port 0
+[04/14/19-22:03:04] [ * ] [  server]	 DEBUG 0000004
+[04/14/19-22:03:04] [DBG] [  server]	[THREAD 0] proc event 0
+[04/14/19-22:03:04] [ * ] [  server]	[THREAD 0] read_write_cb fd 256 revents 4
+[04/14/19-22:03:04] [DBG] [  server]	[THREAD 0] socket write 256 
+[04/14/19-22:03:04] [DBG] [  server]	[THREAD 0] run write callback 405720
+[04/14/19-22:03:04] [DBG] [http_client]	dap_http_client_write...
+[04/14/19-22:03:04] [DBG] [  server]	dap_cur->buf_out_size = 0, set ev_read watcher 
+[04/14/19-22:03:04] [ * ] [  server]	[THREAD 0] RW DONE
+[04/14/19-22:03:04] [INF] [  server]	accept_cb: Client accept socket 268
+[04/14/19-22:03:04] [ * ] [http_client]	dap_http_client_delete
+[04/14/19-22:03:04] [DBG] [dap_client_remote]	Create remote client[]
+[04/14/19-22:03:04] [ * ] [  server]	[THREAD 3] RW DONE
+[04/14/19-22:03:05] [ * ] [http_client]	dap_http_client_new
+[04/14/19-22:03:05] [DBG] [dap_client_remote]	Create remote client: ip: 0.0.0.0 port 0
+[04/14/19-22:03:05] [ * ] [  server]	 DEBUG 0000004
+[04/14/19-22:03:05] [DBG] [  server]	[THREAD 1] proc event 0
+[04/14/19-22:03:05] [ * ] [  server]	[THREAD 1] read_write_cb fd 268 revents 4
+[04/14/19-22:03:05] [DBG] [  server]	[THREAD 1] socket write 268 
+[04/14/19-22:03:05] [DBG] [  server]	[THREAD 1] run write callback 405720
+[04/14/19-22:03:05] [DBG] [http_client]	dap_http_client_write...
+[04/14/19-22:03:05] [DBG] [  server]	dap_cur->buf_out_size = 0, set ev_read watcher 
+[04/14/19-22:03:05] [ * ] [  server]	[THREAD 1] RW DONE
+[04/14/19-22:03:09] [DBG] [  server]	[THREAD 0] proc event 0
+[04/14/19-22:03:09] [ * ] [  server]	[THREAD 0] read_write_cb fd 256 revents 1
+[04/14/19-22:03:09] [DBG] [  server]	[THREAD 0] socket read 256 
+[04/14/19-22:03:09] [DBG] [  server]	[THREAD 0] read 558 socket client said: GET /fcgi/opa HTTP/1.1
+Host: localhost:8000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+X-Compress: null
+Accept-Encoding: gzip, deflate, br
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,fr;q=0.6,de;q=0.5,cs;q=0.4,zh-CN;q=0.3,zh;q=0.2,af;q=0.1,cy;q=0.1
+
+
+[04/14/19-22:03:09] [DBG] [  server]	[THREAD 0] run read callback 404D90
+[04/14/19-22:03:09] [DBG] [http_client]	dap_http_client_read...
+[04/14/19-22:03:09] [WRN] [http_client]	HTTP client in state read 1 taked bytes in input 558
+[04/14/19-22:03:09] [ * ] [http_client]	dap_http_request_line_parse
+[04/14/19-22:03:09] [WRN] [http_client]	Input: action 'GET' pos=3 pos_kw_begin=0
+[04/14/19-22:03:09] [WRN] [http_client]	Input: url '/fcgi/opa' pos=13 pos_kw_begin=4
+[04/14/19-22:03:09] [WRN] [http_client]	Input: GET request for /fcgi/opa document (query string '')
+[04/14/19-22:03:09] [INF] [http_client]	Input: HTTP headers are over
+[04/14/19-22:03:09] [DBG] [  server]	[THREAD 0] socket write 256 
+[04/14/19-22:03:09] [DBG] [  server]	[THREAD 0] run write callback 405720
+[04/14/19-22:03:09] [DBG] [http_client]	dap_http_client_write...
+[04/14/19-22:03:09] [DBG] [dap_http_fcgi]	dap_http_fcgi_headers_write
+[04/14/19-22:03:09] [ERR] [dap_http_fcgi]	can't connect to "/tmp/fcgi.socket"
+[04/14/19-22:03:09] [DBG] [http_client]	Output: HTTP response with 500 status code
+[04/14/19-22:03:09] [ERR] [dap_common]	Can't print formatted time in string
+[04/14/19-22:03:09] [DBG] [http_client]	Output: Headers generated
+[04/14/19-22:03:09] [DBG] [  server]	[THREAD 0] send dap_cur->buf_out_size = 36 , HTTP/1.1 500 Internal Server Error
+
+[04/14/19-22:03:09] [INF] [  server]	[THREAD 0] signal_close: Close Socket 256
+[04/14/19-22:03:09] [DBG] [  server]	[THREAD 0] Removed epoll's event fd 256
+[04/14/19-22:03:09] [DBG] [dap_client_remote]	Client structure remove
+[04/14/19-22:03:10] [ * ] [http_client]	dap_http_client_delete
+[04/14/19-22:03:10] [ * ] [  server]	[THREAD 0] RW DONE
+[04/14/19-22:03:17] [DBG] [  server]	[THREAD 1] proc event 0
+[04/14/19-22:03:17] [ * ] [  server]	[THREAD 1] read_write_cb fd 268 revents 1
+[04/14/19-22:03:17] [DBG] [  server]	[THREAD 1] socket read 268 
+[04/14/19-22:03:17] [DBG] [  server]	[THREAD 1] 0 bytes read
+[04/14/19-22:03:17] [INF] [  server]	[THREAD 1] signal_close: Close Socket 268
+[04/14/19-22:03:17] [DBG] [  server]	[THREAD 1] Removed epoll's event fd 268
+[04/14/19-22:03:17] [DBG] [dap_client_remote]	Client structure remove
+[04/14/19-22:03:17] [INF] [  server]	accept_cb: Client accept socket 272
+[04/14/19-22:03:17] [DBG] [dap_client_remote]	Create remote client[]
+[04/14/19-22:03:18] [ * ] [http_client]	dap_http_client_delete
+[04/14/19-22:03:18] [ * ] [  server]	[THREAD 1] RW DONE
+[04/14/19-22:03:18] [ * ] [http_client]	dap_http_client_new
+[04/14/19-22:03:18] [DBG] [dap_client_remote]	Create remote client: ip: 0.0.0.0 port 0
+[04/14/19-22:03:18] [ * ] [  server]	 DEBUG 0000004
+[04/14/19-22:03:18] [DBG] [  server]	[THREAD 2] proc event 0
+[04/14/19-22:03:18] [ * ] [  server]	[THREAD 2] read_write_cb fd 272 revents 5
+[04/14/19-22:03:18] [DBG] [  server]	[THREAD 2] socket read 272 
+[04/14/19-22:03:18] [INF] [  server]	accept_cb: Client accept socket 276
+[04/14/19-22:03:18] [DBG] [  server]	[THREAD 2] read 558 socket client said: GET /fcgi/opa HTTP/1.1
+Host: localhost:8000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+X-Compress: null
+Accept-Encoding: gzip, deflate, br
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,fr;q=0.6,de;q=0.5,cs;q=0.4,zh-CN;q=0.3,zh;q=0.2,af;q=0.1,cy;q=0.1
+
+
+[04/14/19-22:03:18] [DBG] [  server]	[THREAD 2] run read callback 404D90
+[04/14/19-22:03:18] [DBG] [http_client]	dap_http_client_read...
+[04/14/19-22:03:18] [WRN] [http_client]	HTTP client in state read 1 taked bytes in input 558
+[04/14/19-22:03:18] [DBG] [dap_client_remote]	Create remote client[]
+[04/14/19-22:03:18] [ * ] [http_client]	dap_http_request_line_parse
+[04/14/19-22:03:18] [WRN] [http_client]	Input: action 'GET' pos=3 pos_kw_begin=0
+[04/14/19-22:03:18] [WRN] [http_client]	Input: url '/fcgi/opa' pos=13 pos_kw_begin=4
+[04/14/19-22:03:18] [WRN] [http_client]	Input: GET request for /fcgi/opa document (query string '')
+[04/14/19-22:03:18] [INF] [http_client]	Input: HTTP headers are over
+[04/14/19-22:03:18] [DBG] [  server]	[THREAD 2] socket write 272 
+[04/14/19-22:03:18] [DBG] [  server]	[THREAD 2] run write callback 405720
+[04/14/19-22:03:18] [DBG] [http_client]	dap_http_client_write...
+[04/14/19-22:03:18] [DBG] [dap_http_fcgi]	dap_http_fcgi_headers_write
+[04/14/19-22:03:18] [ERR] [dap_http_fcgi]	can't connect to "/tmp/fcgi.socket"
+[04/14/19-22:03:18] [DBG] [http_client]	Output: HTTP response with 500 status code
+[04/14/19-22:03:18] [ERR] [dap_common]	Can't print formatted time in string
+[04/14/19-22:03:18] [DBG] [http_client]	Output: Headers generated
+[04/14/19-22:03:18] [DBG] [  server]	[THREAD 2] send dap_cur->buf_out_size = 36 , HTTP/1.1 500 Internal Server Error
+
+[04/14/19-22:03:18] [INF] [  server]	[THREAD 2] signal_close: Close Socket 272
+[04/14/19-22:03:18] [DBG] [  server]	[THREAD 2] Removed epoll's event fd 272
+[04/14/19-22:03:18] [DBG] [dap_client_remote]	Client structure remove
+[04/14/19-22:03:19] [ * ] [http_client]	dap_http_client_new
+[04/14/19-22:03:19] [DBG] [dap_client_remote]	Create remote client: ip: 0.0.0.0 port 0
+[04/14/19-22:03:19] [ * ] [  server]	 DEBUG 0000004
+[04/14/19-22:03:19] [DBG] [  server]	[THREAD 3] proc event 0
+[04/14/19-22:03:19] [ * ] [  server]	[THREAD 3] read_write_cb fd 276 revents 4
+[04/14/19-22:03:19] [DBG] [  server]	[THREAD 3] socket write 276 
+[04/14/19-22:03:19] [DBG] [  server]	[THREAD 3] run write callback 405720
+[04/14/19-22:03:19] [DBG] [http_client]	dap_http_client_write...
+[04/14/19-22:03:19] [DBG] [  server]	dap_cur->buf_out_size = 0, set ev_read watcher 
+[04/14/19-22:03:19] [ * ] [  server]	[THREAD 3] RW DONE
+[04/14/19-22:03:19] [INF] [  server]	accept_cb: Client accept socket 280
+[04/14/19-22:03:19] [DBG] [dap_client_remote]	Create remote client[]
+[04/14/19-22:03:19] [ * ] [http_client]	dap_http_client_delete
+[04/14/19-22:03:19] [ * ] [  server]	[THREAD 2] RW DONE
+[04/14/19-22:03:19] [ * ] [http_client]	dap_http_client_new
+[04/14/19-22:03:19] [DBG] [dap_client_remote]	Create remote client: ip: 0.0.0.0 port 0
+[04/14/19-22:03:19] [ * ] [  server]	 DEBUG 0000004
+[04/14/19-22:03:19] [DBG] [  server]	[THREAD 0] proc event 0
+[04/14/19-22:03:19] [ * ] [  server]	[THREAD 0] read_write_cb fd 280 revents 4
+[04/14/19-22:03:19] [DBG] [  server]	[THREAD 0] socket write 280 
+[04/14/19-22:03:19] [DBG] [  server]	[THREAD 0] run write callback 405720
+[04/14/19-22:03:19] [DBG] [http_client]	dap_http_client_write...
+[04/14/19-22:03:19] [DBG] [  server]	dap_cur->buf_out_size = 0, set ev_read watcher 
+[04/14/19-22:03:19] [ * ] [  server]	[THREAD 0] RW DONE
+[04/14/19-22:03:29] [DBG] [  server]	[THREAD 3] proc event 0
+[04/14/19-22:03:29] [ * ] [  server]	[THREAD 3] read_write_cb fd 276 revents 1
+[04/14/19-22:03:29] [DBG] [  server]	[THREAD 3] socket read 276 
+[04/14/19-22:03:29] [DBG] [  server]	[THREAD 0] proc event 0
+[04/14/19-22:03:29] [ * ] [  server]	[THREAD 0] read_write_cb fd 280 revents 1
+[04/14/19-22:03:29] [DBG] [  server]	[THREAD 0] socket read 280 
+[04/14/19-22:03:29] [DBG] [  server]	[THREAD 3] 0 bytes read
+[04/14/19-22:03:29] [INF] [  server]	[THREAD 3] signal_close: Close Socket 276
+[04/14/19-22:03:29] [DBG] [  server]	[THREAD 3] Removed epoll's event fd 276
+[04/14/19-22:03:29] [DBG] [dap_client_remote]	Client structure remove
+[04/14/19-22:03:29] [DBG] [  server]	[THREAD 0] 0 bytes read
+[04/14/19-22:03:29] [INF] [  server]	[THREAD 0] signal_close: Close Socket 280
+[04/14/19-22:03:29] [DBG] [  server]	[THREAD 0] Removed epoll's event fd 280
+[04/14/19-22:03:29] [DBG] [dap_client_remote]	Client structure remove
+[04/14/19-22:03:29] [INF] [  server]	accept_cb: Client accept socket 284
+[04/14/19-22:03:29] [DBG] [dap_client_remote]	Create remote client[]
+[04/14/19-22:03:30] [ * ] [http_client]	dap_http_client_delete
+[04/14/19-22:03:30] [ * ] [http_client]	dap_http_client_delete
+[04/14/19-22:03:30] [ * ] [  server]	[THREAD 0] RW DONE
+[04/14/19-22:03:30] [ * ] [http_client]	dap_http_client_new
+[04/14/19-22:03:30] [DBG] [dap_client_remote]	Create remote client: ip: 0.0.0.0 port 0
+[04/14/19-22:03:30] [ * ] [  server]	 DEBUG 0000004
+[04/14/19-22:03:30] [DBG] [  server]	[THREAD 1] proc event 0
+[04/14/19-22:03:30] [ * ] [  server]	[THREAD 1] read_write_cb fd 284 revents 5
+[04/14/19-22:03:30] [DBG] [  server]	[THREAD 1] socket read 284 
+[04/14/19-22:03:30] [INF] [  server]	accept_cb: Client accept socket 288
+[04/14/19-22:03:30] [DBG] [  server]	[THREAD 1] read 558 socket client said: GET /fcgi/opa HTTP/1.1
+Host: localhost:8000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+X-Compress: null
+Accept-Encoding: gzip, deflate, br
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,fr;q=0.6,de;q=0.5,cs;q=0.4,zh-CN;q=0.3,zh;q=0.2,af;q=0.1,cy;q=0.1
+
+
+[04/14/19-22:03:30] [DBG] [  server]	[THREAD 1] run read callback 404D90
+[04/14/19-22:03:30] [DBG] [http_client]	dap_http_client_read...
+[04/14/19-22:03:30] [WRN] [http_client]	HTTP client in state read 1 taked bytes in input 558
+[04/14/19-22:03:30] [DBG] [dap_client_remote]	Create remote client[]
+[04/14/19-22:03:30] [ * ] [http_client]	dap_http_request_line_parse
+[04/14/19-22:03:30] [WRN] [http_client]	Input: action 'GET' pos=3 pos_kw_begin=0
+[04/14/19-22:03:30] [WRN] [http_client]	Input: url '/fcgi/opa' pos=13 pos_kw_begin=4
+[04/14/19-22:03:30] [WRN] [http_client]	Input: GET request for /fcgi/opa document (query string '')
+[04/14/19-22:03:30] [INF] [http_client]	Input: HTTP headers are over
+[04/14/19-22:03:30] [DBG] [  server]	[THREAD 1] socket write 284 
+[04/14/19-22:03:30] [DBG] [  server]	[THREAD 1] run write callback 405720
+[04/14/19-22:03:30] [DBG] [http_client]	dap_http_client_write...
+[04/14/19-22:03:30] [DBG] [dap_http_fcgi]	dap_http_fcgi_headers_write
+[04/14/19-22:03:30] [ERR] [dap_http_fcgi]	can't connect to "/tmp/fcgi.socket"
+[04/14/19-22:03:30] [DBG] [http_client]	Output: HTTP response with 500 status code
+[04/14/19-22:03:30] [ERR] [dap_common]	Can't print formatted time in string
+[04/14/19-22:03:30] [DBG] [http_client]	Output: Headers generated
+[04/14/19-22:03:30] [DBG] [  server]	[THREAD 1] send dap_cur->buf_out_size = 36 , HTTP/1.1 500 Internal Server Error
+
+[04/14/19-22:03:30] [INF] [  server]	[THREAD 1] signal_close: Close Socket 284
+[04/14/19-22:03:30] [DBG] [  server]	[THREAD 1] Removed epoll's event fd 284
+[04/14/19-22:03:30] [DBG] [dap_client_remote]	Client structure remove
+[04/14/19-22:03:33] [ * ] [http_client]	dap_http_client_new
+[04/14/19-22:10:11] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-22:10:11] [ * ] [  server]	Initialized socket server module
+[04/14/19-22:10:11] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-22:10:11] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-22:10:11] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-22:10:11] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-22:10:11] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-22:10:11] [ * ] [  server]	 Socket 100 set nonblock...
+[04/14/19-22:10:11] [ * ] [  server]	 Socket created...
+[04/14/19-22:10:11] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-22:10:11] [INF] [  server]	pthread_mutex_init
+[04/14/19-22:10:11] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-22:10:11] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-22:10:11] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-22:10:11] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-22:10:11] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-22:10:11] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-22:10:11] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-22:10:11] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-22:10:11] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-22:10:11] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-22:10:11] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-22:10:15] [INF] [  server]	accept_cb: Client accept socket 180
+[04/14/19-22:10:15] [DBG] [dap_client_remote]	Create remote client[]
+[04/14/19-22:10:15] [ * ] [http_client]	dap_http_client_new
+[04/14/19-22:10:15] [DBG] [dap_client_remote]	Create remote client: ip: 0.0.0.0 port 0
+[04/14/19-22:10:15] [ * ] [  server]	 DEBUG 0000004
+[04/14/19-22:10:15] [DBG] [  server]	[THREAD 0] proc event 0
+[04/14/19-22:10:15] [INF] [  server]	accept_cb: Client accept socket 188
+[04/14/19-22:10:15] [ * ] [  server]	[THREAD 0] read_write_cb fd 180 revents 5
+[04/14/19-22:10:15] [DBG] [  server]	[THREAD 0] socket read 180 
+[04/14/19-22:10:15] [DBG] [dap_client_remote]	Create remote client[]
+[04/14/19-22:10:15] [DBG] [  server]	[THREAD 0] read 558 socket client said: GET /fcgi/opa HTTP/1.1
+Host: localhost:8000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+X-Compress: null
+Accept-Encoding: gzip, deflate, br
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,fr;q=0.6,de;q=0.5,cs;q=0.4,zh-CN;q=0.3,zh;q=0.2,af;q=0.1,cy;q=0.1
+
+
+[04/14/19-22:10:15] [DBG] [  server]	[THREAD 0] run read callback 404D90
+[04/14/19-22:10:15] [DBG] [http_client]	dap_http_client_read...
+[04/14/19-22:10:15] [WRN] [http_client]	HTTP client in state read 1 taked bytes in input 558
+[04/14/19-22:10:15] [ * ] [http_client]	dap_http_request_line_parse
+[04/14/19-22:10:15] [WRN] [http_client]	Input: action 'GET' pos=3 pos_kw_begin=0
+[04/14/19-22:10:15] [WRN] [http_client]	Input: url '/fcgi/opa' pos=13 pos_kw_begin=4
+[04/14/19-22:10:15] [WRN] [http_client]	Input: GET request for /fcgi/opa document (query string '')
+[04/14/19-22:10:15] [INF] [http_client]	Input: HTTP headers are over
+[04/14/19-22:10:15] [DBG] [  server]	[THREAD 0] socket write 180 
+[04/14/19-22:10:15] [DBG] [  server]	[THREAD 0] run write callback 405720
+[04/14/19-22:10:15] [DBG] [http_client]	dap_http_client_write...
+[04/14/19-22:10:15] [DBG] [dap_http_fcgi]	dap_http_fcgi_headers_write
+[04/14/19-22:10:15] [ERR] [dap_http_fcgi]	can't connect to "/tmp/fcgi.socket"
+[04/14/19-22:10:15] [DBG] [http_client]	Output: HTTP response with 500 status code
+[04/14/19-22:10:15] [ERR] [dap_common]	Can't print formatted time in string
+[04/14/19-22:10:15] [DBG] [http_client]	Output: Headers generated
+[04/14/19-22:10:15] [DBG] [  server]	[THREAD 0] send dap_cur->buf_out_size = 36 , HTTP/1.1 500 Internal Server Error
+
+[04/14/19-22:10:15] [INF] [  server]	[THREAD 0] signal_close: Close Socket 180
+[04/14/19-22:10:15] [DBG] [  server]	[THREAD 0] Removed epoll's event fd 180
+[04/14/19-22:10:15] [DBG] [dap_client_remote]	Client structure remove
+[04/14/19-22:10:16] [ * ] [http_client]	dap_http_client_new
+[04/14/19-22:10:16] [DBG] [dap_client_remote]	Create remote client: ip: 0.0.0.0 port 0
+[04/14/19-22:10:16] [ * ] [  server]	 DEBUG 0000004
+[04/14/19-22:10:16] [DBG] [  server]	[THREAD 1] proc event 0
+[04/14/19-22:10:16] [ * ] [  server]	[THREAD 1] read_write_cb fd 188 revents 4
+[04/14/19-22:10:16] [DBG] [  server]	[THREAD 1] socket write 188 
+[04/14/19-22:10:16] [DBG] [  server]	[THREAD 1] run write callback 405720
+[04/14/19-22:10:16] [DBG] [http_client]	dap_http_client_write...
+[04/14/19-22:10:16] [DBG] [  server]	dap_cur->buf_out_size = 0, set ev_read watcher 
+[04/14/19-22:10:16] [INF] [  server]	accept_cb: Client accept socket 224
+[04/14/19-22:10:16] [DBG] [dap_client_remote]	Create remote client[]
+[04/14/19-22:10:16] [ * ] [  server]	[THREAD 1] RW DONE
+[04/14/19-22:10:16] [ * ] [http_client]	dap_http_client_delete
+[04/14/19-22:10:16] [ * ] [  server]	[THREAD 0] RW DONE
+[04/14/19-22:10:16] [ * ] [http_client]	dap_http_client_new
+[04/14/19-22:10:16] [DBG] [dap_client_remote]	Create remote client: ip: 0.0.0.0 port 0
+[04/14/19-22:10:16] [ * ] [  server]	 DEBUG 0000004
+[04/14/19-22:10:16] [DBG] [  server]	[THREAD 2] proc event 0
+[04/14/19-22:10:16] [ * ] [  server]	[THREAD 2] read_write_cb fd 224 revents 4
+[04/14/19-22:10:16] [DBG] [  server]	[THREAD 2] socket write 224 
+[04/14/19-22:10:16] [DBG] [  server]	[THREAD 2] run write callback 405720
+[04/14/19-22:10:16] [DBG] [http_client]	dap_http_client_write...
+[04/14/19-22:10:16] [DBG] [  server]	dap_cur->buf_out_size = 0, set ev_read watcher 
+[04/14/19-22:10:16] [ * ] [  server]	[THREAD 2] RW DONE
+[04/14/19-23:05:37] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:05:37] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:05:37] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:05:37] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:05:37] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:05:37] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:05:37] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:05:37] [ * ] [  server]	 Socket 100 set nonblock...
+[04/14/19-23:05:37] [ * ] [  server]	 Socket created...
+[04/14/19-23:05:37] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:05:37] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:05:37] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:05:37] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:05:37] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:05:37] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:05:37] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:05:37] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:05:37] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:05:37] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:05:37] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:05:37] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:05:37] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:05:42] [INF] [  server]	accept_cb: Client accept socket 180
+[04/14/19-23:05:42] [DBG] [dap_client_remote]	Create remote client[]
+[04/14/19-23:05:42] [ * ] [http_client]	dap_http_client_new
+[04/14/19-23:05:42] [DBG] [dap_client_remote]	Create remote client: ip: 0.0.0.0 port 0
+[04/14/19-23:05:42] [ * ] [  server]	 DEBUG 0000004
+[04/14/19-23:05:42] [DBG] [  server]	[THREAD 0] proc event 0
+[04/14/19-23:05:42] [ * ] [  server]	[THREAD 0] read_write_cb fd 180 revents 5
+[04/14/19-23:05:42] [DBG] [  server]	[THREAD 0] socket read 180 
+[04/14/19-23:05:42] [INF] [  server]	accept_cb: Client accept socket 188
+[04/14/19-23:05:42] [DBG] [  server]	[THREAD 0] read 558 socket client said: GET /fcgi/opa HTTP/1.1
+Host: localhost:8000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+X-Compress: null
+Accept-Encoding: gzip, deflate, br
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,fr;q=0.6,de;q=0.5,cs;q=0.4,zh-CN;q=0.3,zh;q=0.2,af;q=0.1,cy;q=0.1
+
+
+[04/14/19-23:05:43] [DBG] [  server]	[THREAD 0] run read callback 404D90
+[04/14/19-23:05:43] [DBG] [http_client]	dap_http_client_read...
+[04/14/19-23:05:43] [WRN] [http_client]	HTTP client in state read 1 taked bytes in input 558
+[04/14/19-23:05:43] [DBG] [dap_client_remote]	Create remote client[]
+[04/14/19-23:05:43] [ * ] [http_client]	dap_http_request_line_parse
+[04/14/19-23:05:43] [WRN] [http_client]	Input: action 'GET' pos=3 pos_kw_begin=0
+[04/14/19-23:05:43] [WRN] [http_client]	Input: url '/fcgi/opa' pos=13 pos_kw_begin=4
+[04/14/19-23:05:43] [WRN] [http_client]	Input: GET request for /fcgi/opa document (query string '')
+[04/14/19-23:05:43] [INF] [http_client]	Input: HTTP headers are over
+[04/14/19-23:05:43] [DBG] [  server]	[THREAD 0] socket write 180 
+[04/14/19-23:05:43] [DBG] [  server]	[THREAD 0] run write callback 405720
+[04/14/19-23:05:43] [DBG] [http_client]	dap_http_client_write...
+[04/14/19-23:05:43] [DBG] [dap_http_fcgi]	dap_http_fcgi_headers_write
+[04/14/19-23:05:43] [ERR] [dap_http_fcgi]	can't connect to "/tmp/fcgi.socket"
+[04/14/19-23:05:43] [DBG] [http_client]	Output: HTTP response with 500 status code
+[04/14/19-23:05:43] [ERR] [dap_common]	Can't print formatted time in string
+[04/14/19-23:05:43] [DBG] [http_client]	Output: Headers generated
+[04/14/19-23:05:43] [DBG] [  server]	[THREAD 0] send dap_cur->buf_out_size = 36 , HTTP/1.1 500 Internal Server Error
+
+[04/14/19-23:05:43] [INF] [  server]	[THREAD 0] signal_close: Close Socket 180
+[04/14/19-23:05:43] [DBG] [  server]	[THREAD 0] Removed epoll's event fd 180
+[04/14/19-23:05:43] [DBG] [dap_client_remote]	Client structure remove
+[04/14/19-23:05:43] [ * ] [http_client]	dap_http_client_new
+[04/14/19-23:05:43] [DBG] [dap_client_remote]	Create remote client: ip: 0.0.0.0 port 0
+[04/14/19-23:05:43] [ * ] [  server]	 DEBUG 0000004
+[04/14/19-23:05:43] [DBG] [  server]	[THREAD 1] proc event 0
+[04/14/19-23:05:43] [ * ] [  server]	[THREAD 1] read_write_cb fd 188 revents 4
+[04/14/19-23:05:43] [DBG] [  server]	[THREAD 1] socket write 188 
+[04/14/19-23:05:43] [DBG] [  server]	[THREAD 1] run write callback 405720
+[04/14/19-23:05:43] [DBG] [http_client]	dap_http_client_write...
+[04/14/19-23:05:43] [DBG] [  server]	dap_cur->buf_out_size = 0, set ev_read watcher 
+[04/14/19-23:05:43] [ * ] [  server]	[THREAD 1] RW DONE
+[04/14/19-23:05:43] [INF] [  server]	accept_cb: Client accept socket 228
+[04/14/19-23:05:43] [DBG] [dap_client_remote]	Create remote client[]
+[04/14/19-23:05:43] [ * ] [http_client]	dap_http_client_delete
+[04/14/19-23:05:43] [ * ] [  server]	[THREAD 0] RW DONE
+[04/14/19-23:05:44] [ * ] [http_client]	dap_http_client_new
+[04/14/19-23:05:44] [DBG] [dap_client_remote]	Create remote client: ip: 0.0.0.0 port 0
+[04/14/19-23:05:44] [ * ] [  server]	 DEBUG 0000004
+[04/14/19-23:05:44] [DBG] [  server]	[THREAD 2] proc event 0
+[04/14/19-23:05:44] [ * ] [  server]	[THREAD 2] read_write_cb fd 228 revents 4
+[04/14/19-23:05:44] [DBG] [  server]	[THREAD 2] socket write 228 
+[04/14/19-23:05:44] [DBG] [  server]	[THREAD 2] run write callback 405720
+[04/14/19-23:05:44] [DBG] [http_client]	dap_http_client_write...
+[04/14/19-23:05:44] [DBG] [  server]	dap_cur->buf_out_size = 0, set ev_read watcher 
+[04/14/19-23:05:44] [ * ] [  server]	[THREAD 2] RW DONE
+[04/14/19-23:21:47] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:21:47] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:21:47] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:21:47] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:21:47] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:21:47] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:21:47] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:21:47] [ * ] [  server]	 Socket created...
+[04/14/19-23:21:47] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:21:47] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:21:47] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:21:47] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:21:47] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:21:47] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:21:47] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:21:47] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:21:47] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:21:47] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:21:47] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:21:47] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:21:47] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:05] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:05] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:05] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:05] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:05] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:05] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:05] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:05] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:05] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:05] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:05] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:05] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:05] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:05] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:05] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:05] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:05] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:05] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:05] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:05] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:05] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:09] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:09] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:09] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:09] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:09] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:09] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:09] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:09] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:09] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:09] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:09] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:09] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:09] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:09] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:09] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:09] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:09] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:09] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:09] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:09] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:09] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:09] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:09] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:09] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:09] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:09] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:09] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:09] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:09] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:09] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:09] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:09] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:09] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:09] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:09] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:09] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:09] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:09] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:09] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:09] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:09] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:09] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:09] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:09] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:09] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:09] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:09] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:09] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:09] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:09] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:09] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:09] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:09] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:09] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:09] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:09] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:09] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:09] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:09] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:09] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:09] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:09] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:09] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:09] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:09] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:09] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:09] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:09] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:09] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:09] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:10] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:10] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:10] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:10] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:10] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:10] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:10] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:10] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:10] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:10] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:10] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:10] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:10] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:10] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:10] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:10] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:10] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:10] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:10] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:10] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:10] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:10] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:10] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:10] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:10] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:10] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:10] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:10] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:10] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:10] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:10] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:10] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:10] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:10] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:10] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:10] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:10] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:10] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:10] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:10] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:10] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:10] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:10] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:10] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:10] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:10] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:10] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:10] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:10] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:10] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:10] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:10] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:10] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:10] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:10] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:10] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:10] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:10] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:10] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:10] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:10] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:10] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:10] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:10] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:10] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:10] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:10] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:10] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:10] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:10] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:10] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:10] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:10] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:10] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:10] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:10] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:10] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:10] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:10] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:10] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:10] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:10] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:10] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:10] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:10] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:10] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:10] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:10] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:10] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:10] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:10] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:10] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:10] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:10] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:10] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:10] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:10] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:10] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:10] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:10] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:10] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:10] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:10] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:10] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:10] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:10] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:10] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:10] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:10] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:10] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:10] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:10] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:10] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:10] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:10] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:10] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:10] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:10] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:10] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:10] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:10] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:10] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:10] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:10] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:10] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:10] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:10] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:10] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:10] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:10] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:10] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:10] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:10] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:10] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:10] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:10] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:10] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:10] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:10] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:10] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:10] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:10] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:10] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:10] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:10] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:10] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:10] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:10] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:10] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:10] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:10] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:10] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:10] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:10] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:10] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:10] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:10] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:10] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:10] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:10] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:10] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:10] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:10] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:10] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:10] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:10] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:10] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:10] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:10] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:10] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:10] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:10] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:10] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:10] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:10] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:10] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:10] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:10] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:10] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:10] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:10] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:10] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:10] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:10] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:10] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:10] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:10] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:10] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:10] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:10] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:10] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:10] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:10] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:10] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:10] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:10] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:10] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:10] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:10] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:10] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:10] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:10] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:10] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:10] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:10] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:10] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:10] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:10] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:10] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:10] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:10] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:10] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:10] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:10] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:10] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:10] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:10] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:10] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:10] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:10] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:10] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:10] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:10] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:10] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:10] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:10] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:10] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:10] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:10] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:12] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:12] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:12] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:12] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:12] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:12] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:12] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:12] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:12] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:12] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:12] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:12] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:12] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:12] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:12] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:12] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:12] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:12] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:12] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:12] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:12] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:12] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:12] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:12] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:12] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:12] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:12] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:12] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:12] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:12] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:12] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:12] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:12] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:12] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:12] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:12] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:12] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:12] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:12] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:12] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:12] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:12] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:12] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:12] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:12] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:12] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:12] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:12] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:12] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:12] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:12] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:12] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:12] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:12] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:12] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:12] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:12] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:12] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:12] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:12] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:12] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:12] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:12] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:12] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:12] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:12] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:12] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:12] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:12] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:12] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:12] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:12] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:12] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:12] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:12] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:12] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:12] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:12] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:12] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:12] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:12] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:12] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:12] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:12] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:12] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:12] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:12] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:12] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:12] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:12] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:12] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:12] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:12] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:12] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:12] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:12] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:12] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:12] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:12] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:12] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:12] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:12] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:12] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:12] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:12] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:12] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:12] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:12] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:12] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:12] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:12] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:12] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:12] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:12] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:12] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:12] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:12] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:12] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:12] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:12] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:12] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:12] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:12] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:12] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:12] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:12] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:12] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:12] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:12] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:12] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:12] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:12] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:12] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:12] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:12] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:12] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:12] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:12] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:12] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:12] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:12] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:12] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:12] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:12] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:12] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:12] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:12] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:12] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:12] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:12] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:12] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:12] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:12] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:12] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:12] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:12] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:12] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:12] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:12] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:12] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:12] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:12] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:12] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:12] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:12] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:12] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:12] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:12] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:12] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:12] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:12] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:12] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:12] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:12] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:12] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:12] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:12] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:12] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:12] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:12] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:12] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:12] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:12] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:12] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:13] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:13] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:13] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:13] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:13] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:13] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:13] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:13] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:13] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:13] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:13] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:13] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:13] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:13] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:13] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:13] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:13] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:13] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:13] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:13] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:13] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:13] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:13] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:13] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:13] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:13] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:13] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:13] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:13] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:13] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:13] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:13] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:13] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:13] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:13] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:13] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:13] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:13] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:13] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:13] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:13] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:13] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:13] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:13] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:13] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:13] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:13] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:13] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:13] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:13] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:13] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:13] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:13] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:13] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:13] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:13] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:13] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:13] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:13] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:13] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:13] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:13] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:13] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:13] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:13] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:13] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:13] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:13] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:13] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:13] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:13] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:13] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:13] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:13] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:13] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:13] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:13] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:13] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:13] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:13] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:13] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:13] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:13] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:13] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:13] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:13] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:13] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:13] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:13] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:13] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:13] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:13] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:13] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:13] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:13] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:13] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:13] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:13] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:13] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:13] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:13] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:13] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:13] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:13] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:13] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:13] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:13] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:13] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:13] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:13] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:13] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:13] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:13] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:13] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:13] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:13] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:13] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:13] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:13] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:13] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:13] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:13] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:13] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:13] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:13] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:13] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:13] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:13] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:13] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:13] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:13] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:13] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:13] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:13] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:13] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:13] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:13] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:13] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:13] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:13] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:13] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:13] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:13] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:13] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:13] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:13] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:13] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:13] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:13] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:13] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:13] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:13] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:13] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:13] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:13] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:13] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:13] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:13] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:14] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:14] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:14] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:14] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:14] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:14] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:14] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:14] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:14] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:14] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:14] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:14] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:14] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:14] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:14] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:14] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:14] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:14] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:14] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:14] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:14] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:14] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:14] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:14] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:14] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:14] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:14] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:14] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:14] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:14] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:14] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:14] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:14] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:14] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:14] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:14] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:14] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:14] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:14] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:14] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:14] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:14] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:14] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:14] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:14] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:14] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:14] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:14] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:14] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:14] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:14] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:14] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:14] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:14] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:14] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:14] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:14] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:14] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:14] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:14] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:14] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:14] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:14] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:14] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:14] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:14] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:14] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:14] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:14] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:14] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:14] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:14] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:14] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:14] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:14] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:14] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:14] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:14] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:14] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:14] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:14] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:14] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:14] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:14] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:14] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:14] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:14] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:14] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:14] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:14] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:14] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:14] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:14] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:14] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:14] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:14] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:14] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:14] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:14] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:14] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:14] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:14] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:14] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:14] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:14] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:14] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:14] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:14] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:14] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:14] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:14] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:14] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:14] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:14] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:14] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:14] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:14] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:14] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:14] [ * ] [  server]	Start loop listener socket thread 3
+[04/14/19-23:22:16] [DBG] [  server]	dap_server_init() threads 4
+[04/14/19-23:22:16] [ * ] [  server]	Initialized socket server module
+[04/14/19-23:22:16] [ * ] [dap_client_remote]	Initialized socket client module
+[04/14/19-23:22:16] [ * ] [http_header]	Initialized HTTP headers module
+[04/14/19-23:22:16] [ * ] [http_client]	Initialized HTTP client module
+[04/14/19-23:22:16] [ * ] [dap_http]	Initialized HTTP server module
+[04/14/19-23:22:16] [DBG] [    main]	config server->enabled = "true" 
+[04/14/19-23:22:16] [ * ] [  server]	 Socket 100 set nonblock...
+[04/14/19-23:22:16] [ * ] [  server]	 Socket created...
+[04/14/19-23:22:16] [INF] [  server]	Binded 127.0.0.1:8000
+[04/14/19-23:22:16] [INF] [  server]	pthread_mutex_init
+[04/14/19-23:22:16] [!!!] [dap_http_folder]	Can't load MIME magic detection database
+[04/14/19-23:22:16] [ * ] [dap_http_fcgi]	Initialized FCGI server module
+[04/14/19-23:22:16] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_path = /fcgi/helloworld
+[04/14/19-23:22:16] [DBG] [dap_http_fcgi]	fcgi_server.fcgi_url = /fcgi
+[04/14/19-23:22:16] [DBG] [dap_http_fcgi]	fcgi_server.unix_socket = /tmp/fcgi.socket
+[04/14/19-23:22:16] [DBG] [dap_http_fcgi]	fcgi_server.port = 9000
+[04/14/19-23:22:16] [DBG] [dap_http]	Added URL processor for '/fcgi' path
+[04/14/19-23:22:16] [ * ] [  server]	Start loop listener socket thread 0
+[04/14/19-23:22:16] [ * ] [  server]	Start loop listener socket thread 1
+[04/14/19-23:22:16] [ * ] [  server]	Start loop listener socket thread 2
+[04/14/19-23:22:16] [ * ] [  server]	Start loop listener socket thread 3

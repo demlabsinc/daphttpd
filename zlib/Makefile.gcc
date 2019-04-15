@@ -1,0 +1,106 @@
+
+#
+#	GCC Makefile (C) 2015 Sleep ass on left light on right
+#	Run with makex86.cmd makex64.cmd
+#
+#	Target:
+#	zlib
+#
+#	zlib
+#
+
+my-dir = $(call parent-dir,$(lastword $(MAKEFILE_LIST)))
+
+#prextarget := bin
+prextarget := ../[LIB]
+
+LOCAL_PATH       := $(call my-dir)
+LOCAL_MODULE     := zlib$(xtarget)
+LOCAL_C_INCLUDES := include/
+
+LOCAL_EXPORT_C_INCLUDES := $(LOCAL_C_INCLUDES)
+
+#LOCAL_CFLAGS := -Wall -O3 -fvisibility=hidden -std=c++11
+LOCAL_CFLAGS := -Wall -O3 -fvisibility=hidden
+LOCAL_CFLAGS += -DUNDEBUG -DNDEBUG
+LOCAL_LDLIBS := 
+LOCAL_LFLAGS := -mconsole -static
+
+#LOCAL_CFLAGS += -DGL_GLEXT_PROTOTYPES
+#LOCAL_LDLIBS := -ldl -lGLESv1_CM -lGLESv2 -llog -landroid
+
+#project_name     := bin/makedir
+
+#program_name     += $(addprefix $(project_name), $(xtarget))
+#root_include_dir := include
+#root_source_dir  := src
+#source_subdirs   := . dir1 dir2
+#compile_flags    := -Wall -O3 -DUNDEBUG -DNDEBUG -fvisibility=hidden -std=c++11
+#link_flags       := -mconsole -static
+#libraries        := 
+
+#relative_include_dirs := $(addprefix /, $(root_include_dir))
+#relative_source_dirs  := $(addprefix /$(root_source_dir)/, $(source_subdirs))
+#objects_dirs          := $(addprefix $(root_source_dir)\, $(source_subdirs))
+
+LOCAL_SRC_FILES := \
+	adler32.c \
+	compress.c \
+	crc32.c \
+	deflate.c \
+	gzclose.c \
+	gzlib.c \
+	gzread.c \
+	gzwrite.c \
+	inflate.c \
+	infback.c \
+	inftrees.c \
+	inffast.c \
+	trees.c \
+	uncompr.c \
+	zutil.c
+
+
+#	$(wildcard $(LOCAL_PATH)/src/timer/unix/*.c) \
+#LOCAL_SRC_FILES := \
+#	src/exta.cpp \
+
+#LOCAL_SRC_FILES := $(LOCAL_SRC_FILES:.cpp=.o)
+#LOCAL_SRC_FILES := $(LOCAL_SRC_FILES:.c=.o)
+
+LOCAL_SRC_FILES := $(LOCAL_SRC_FILES:.cpp=.o)
+LOCAL_SRC_FILES := $(LOCAL_SRC_FILES:.c=.o)
+
+LOCAL_OBJ_FILES := $(addprefix obj/$(xtarget)/, $(LOCAL_SRC_FILES))
+
+#objects_dirs          := $(addprefix $(root_source_dir)\, $(source_subdirs))
+#objects               := $(patsubst ../../%, %, $(wildcard $(addsuffix /*.c*, $(relative_source_dirs))))
+
+
+#LOCAL_OBJ_FILES := $(LOCAL_SRC_FILES:src/=)
+
+all : $(LOCAL_MODULE)
+ 
+$(LOCAL_MODULE) : obj_dirs $(LOCAL_OBJ_FILES)
+	@echo $(xtarget)	$@.a ...
+#	@g++ -o bin/$(xtarget)/$@ $(LOCAL_OBJ_FILES) $(LOCAL_LFLAGS) $(LOCAL_LDLIBS)
+#	@gcc -static -A $(LOCAL_OBJ_FILES)
+	@ar rcs $(prextarget)/$(xtarget)/$@.a $(LOCAL_OBJ_FILES)
+
+obj_dirs :
+	@DIRSCCT.exe $(xtarget) $(LOCAL_SRC_FILES)
+
+obj/$(xtarget)/%.o : %.cpp
+	@echo $(xtarget) $< ...
+	@gcc -o $@ -c $< $(LOCAL_CFLAGS) $(addprefix -I, $(LOCAL_C_INCLUDES))
+ 
+obj/$(xtarget)/%.o : %.c
+	@echo $(xtarget) $< ...
+	@gcc -o $@ -c $< $(LOCAL_CFLAGS) $(addprefix -I, $(LOCAL_C_INCLUDES))
+ 
+.PHONY : clean
+ 
+clean :
+	rm -rf bin obj
+ 
+include $(wildcard $(addsuffix /*.d, $(objects_dirs)))

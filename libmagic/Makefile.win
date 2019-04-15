@@ -1,0 +1,50 @@
+
+my-dir = $(call parent-dir,$(lastword $(MAKEFILE_LIST)))
+
+prextarget := ../lib
+
+LOCAL_PATH       := $(call my-dir)
+LOCAL_MODULE     := libmagic$(xtarget)
+
+include ../win32/[cdf_set].mk
+
+LOCAL_C_INCLUDES += \
+	../zlib/ \
+	../regex/src/
+
+LOCAL_EXPORT_C_INCLUDES := $(LOCAL_C_INCLUDES)
+
+LOCAL_C_DEFINES := UNDEBUG NDEBUG WIN32 __WIN32 _WINDOWS __WINDOWS__ _CRT_SECURE_NO_WARNINGS HAVE_CONFIG_H
+LOCAL_C_DEFINES += HAVE_CONFIG_H REGEX_STATIC
+
+
+LOCAL_SRC_FILES := \
+	src/apprentice.c \
+	src/apptype.c \
+	src/ascmagic.c \
+	src/asctime_r.c \
+	src/asprintf.c \
+	src/cdf.c \
+	src/cdf_time.c \
+	src/compress.c \
+	src/ctime_r.c \
+	src/encoding.c \
+	src/file.c \
+	src/fmtcheck.c \
+	src/fsmagic.c \
+	src/funcs.c \
+	src/getline.c \
+	src/getopt_long.c \
+	src/is_tar.c \
+	src/magic.c \
+	src/pread.c \
+	src/print.c \
+	src/readcdf.c \
+	src/readelf.c \
+	src/softmagic.c \
+	src/strcasestr.c \
+	src/strlcat.c \
+	src/strlcpy.c \
+	src/vasprintf.c \
+
+include ../win32/[cdf_makelib].mk

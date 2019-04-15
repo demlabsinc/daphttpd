@@ -1,0 +1,79 @@
+
+my-dir = $(call parent-dir,$(lastword $(MAKEFILE_LIST)))
+
+prextarget := lib/
+
+LOCAL_PATH       := $(call my-dir)
+LOCAL_MODULE     := test$(xtarget)
+
+include win32/[cdf_set].mk
+
+LOCAL_C_INCLUDES += \
+  pthread-win32/ \
+  libdap-server/enc_server/ \
+  libdap-server/http_server/ \
+  libdap-server/http_server/http_client/ \
+  libdap/core/ \
+  libdap/core/win32/ \
+  libdap/crypto/ \
+  libdap-server-core/ \
+  libjson-c/ \
+  libmemcached/win32/ \
+  libmagic/src/ \
+  uthash/src/ \
+  wepoll/include \
+
+LOCAL_EXPORT_C_INCLUDES := $(LOCAL_C_INCLUDES)
+
+LOCAL_C_DEFINES := UNDEBUG NDEBUG WIN32 _WINDOWS __WINDOWS__ _CRT_SECURE_NO_WARNINGS
+LOCAL_C_DEFINES += _USRDLL _CRT_SECURE_NO_DEPRECATE HAVE_CONFIG_H PTW32_BUILD_INLINED PTW32_STATIC_LIB
+
+LOCAL_LSLIBS := \
+  libdap \
+  libdap_server \
+  libdap_server_core \
+  c-ares \
+  libjson-c \
+  libmemcached \
+  wepoll \
+  zlib \
+	libmagic \
+  libdap_crypto \
+  pthread-win32 \
+  regex \
+
+# libdap-server-udp \
+# libev \
+
+LOCAL_LSLIBS := $(addsuffix $(xtarget).a, $(LOCAL_LSLIBS))
+
+ifneq ($(filter [x86CLANG] [x86_64CLANG] [x86GCC] [x86_64GCC],$(xtarget)),)
+    LOCAL_LSLIBS := $(addprefix lib/$(xtarget)/, $(LOCAL_LSLIBS))
+endif
+
+LOCAL_LDLIBS := \
+    KERNEL32 \
+    USER32 \
+    SHELL32 \
+    WINMM \
+    GDI32 \
+    ADVAPI32 \
+    Ole32 \
+    Version \
+    Imm32 \
+    OleAut32 \
+    ws2_32 \
+    ntdll \
+    psapi \
+    Shlwapi
+
+ifneq ($(filter [x86CLANG] [x86_64CLANG] [x86GCC] [x86_64GCC],$(xtarget)),)
+    LOCAL_LDLIBS := $(addprefix -l, $(LOCAL_LDLIBS))
+else
+    LOCAL_LDLIBS := $(addsuffix .lib, $(LOCAL_LDLIBS))
+endif
+
+LOCAL_SRC_FILES := \
+    main.c \
+
+include win32/[cdf_makebin].mk

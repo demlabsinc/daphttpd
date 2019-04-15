@@ -1,0 +1,40 @@
+
+my-dir = $(call parent-dir,$(lastword $(MAKEFILE_LIST)))
+
+prextarget := ../lib
+
+LOCAL_PATH       := $(call my-dir)
+LOCAL_MODULE     := libdap_server$(xtarget)
+
+C_11_FLAG := TRUE
+
+include ../win32/[cdf_set].mk
+
+LOCAL_C_INCLUDES += \
+  ../pthread-win32/ \
+  enc_server/ \
+  http_server/ \
+  http_server/http_client/ \
+  ../libdap/core/ \
+  ../libdap/core/win32/ \
+  ../libdap/crypto/ \
+  ../libdap-server-core/ \
+  ../libjson-c/ \
+  ../libmemcached/win32/ \
+  ../libmagic/src/ \
+  ../uthash/src/ \
+  ../wepoll/include \
+
+# ../curl/include
+
+LOCAL_EXPORT_C_INCLUDES := $(LOCAL_C_INCLUDES)
+
+LOCAL_C_DEFINES := UNDEBUG NDEBUG WIN32 __WIN32 _WINDOWS __WINDOWS__ _CRT_SECURE_NO_WARNINGS
+LOCAL_C_DEFINES += _USRDLL _CRT_SECURE_NO_DEPRECATE HAVE_CONFIG_H PTW32_BUILD_INLINED PTW32_STATIC_LIB
+
+LOCAL_SRC_FILES := \
+  $(wildcard enc_server/*.c) \
+  $(wildcard http_server/*.c) \
+  $(wildcard http_server/http_client/*.c) \
+
+include ../win32/[cdf_makelib].mk
